@@ -1,6 +1,6 @@
-# Craft
+# immigration-lobby
 
-craft is CRA template powered by [Create React App](https://github.com/facebook/create-react-app).
+lobby-imigrasi is an application that provides information about immigration in Indonesia
 
 ## Development
 

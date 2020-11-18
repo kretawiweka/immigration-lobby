@@ -1,7 +1,13 @@
 import React from 'react';
 
-import Home from '../../containers/Home';
+import Hero from '../../components/Hero';
 
-const HomePage = () => <Home />;
+const HomePage = () => {
+  return (
+    <>
+      <Hero />
+    </>
+  );
+};
 
 export default HomePage;
