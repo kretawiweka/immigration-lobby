@@ -26,28 +26,4 @@ const HeroTitle = styled.h2`
   font-size: 28px;
 `;
 
-const Content = styled.div`
-  margin: 42px;
-`;
-
-const CardContent = styled.div`
-  margin: 14px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const CardTitle = styled.h4`
-  font-size: 18px;
-  text-align: center;
-`;
-
-export {
-  HeroContaier,
-  HeroImage,
-  HeroTitle,
-  HeroLayer,
-  Content,
-  CardTitle,
-  CardContent,
-};
+export { HeroContaier, HeroImage, HeroTitle, HeroLayer };
