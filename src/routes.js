@@ -3,8 +3,8 @@ import Home from './pages/home';
 const routes = [
   {
     path: '/',
-    page: Home
-  }
+    page: Home,
+  },
 ];
 
 export default routes;
