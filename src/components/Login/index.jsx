@@ -5,7 +5,7 @@ import Icon from '@ant-design/icons';
 const Login = () => {
   return (
     <>
-      <h1 style={{ marginLeft: 15, marginBottom: 0, fontFamily: "Arial" }}><strong>DUTA LAYANAN<br></br>KEIMIGRASIAN</strong></h1>
+      <h1 style={{ marginLeft: 15, marginBottom: 0 }}><strong>DUTA LAYANAN<br></br>KEIMIGRASIAN</strong></h1>
       <Row>
         <Col span={8}>
           <hr style={{ height: 10, background: "#64aced" }}></hr>
