@@ -6,7 +6,7 @@ const HeaderContainer = styled.div`
 
 const HeaderContent = styled.div`
   padding: 17.5px;
-  background-color: #ffffff;
+  background-color: #323232;
   min-height: 70px;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ const HeaderAction = styled.div`
 
 const SingleHeaderContainer = styled.div`
   padding: 14px;
-  max-width: 320px;
+  max-width: 480px;
   width: 100%;
 `;
 

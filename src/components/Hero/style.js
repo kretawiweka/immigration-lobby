@@ -22,8 +22,16 @@ const HeroTitle = styled.h2`
   position: absolute;
   color: #fafafa;
   margin-left: 14px;
-  bottom: 14px;
+  bottom: 28px;
   font-size: 28px;
 `;
 
-export { HeroContaier, HeroImage, HeroTitle, HeroLayer };
+const HeroSub = styled.h2`
+  position: absolute;
+  color: #fafafa;
+  margin-left: 14px;
+  bottom: 7px;
+  font-size: 14px;
+`;
+
+export { HeroContaier, HeroImage, HeroTitle, HeroSub, HeroLayer };

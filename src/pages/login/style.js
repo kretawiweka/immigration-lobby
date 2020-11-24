@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Content = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 70px;
 `;
 
 const CardContainer = styled.div`

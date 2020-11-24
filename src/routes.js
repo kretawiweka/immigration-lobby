@@ -1,5 +1,7 @@
 import Home from './pages/home';
 import Login from './pages/login';
+import ServiceInformation from './pages/service-information';
+import ApplicationStatus from './pages/application-status';
 
 const routes = [
   {
@@ -9,6 +11,14 @@ const routes = [
   {
     path: '/login',
     page: Login,
+  },
+  {
+    path: '/informasi-layanan',
+    page: ServiceInformation,
+  },
+  {
+    path: '/status-permohonan',
+    page: ApplicationStatus,
   },
 ];
 
