@@ -20,4 +20,24 @@ const CardTitle = styled.h4`
   color: #fafafa;
 `;
 
-export { Content, CardContent, CardTitle };
+const ContentPassport = styled.div`
+  diplay: flex;
+  flex-direction: column;
+  margin: 14px 28px 105px 28px;
+`;
+
+const BreadCrumbContainer = styled.div`
+  margin: 14px 0px;
+  span {
+    color: #749aa9 !important;
+    cursor: pointer;
+  }
+`;
+
+export {
+  Content,
+  CardContent,
+  CardTitle,
+  ContentPassport,
+  BreadCrumbContainer,
+};

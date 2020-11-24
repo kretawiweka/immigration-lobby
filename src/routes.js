@@ -2,6 +2,7 @@ import Home from './pages/home';
 import Login from './pages/login';
 import ServiceInformation from './pages/service-information';
 import ApplicationStatus from './pages/application-status';
+import ApplicationStatusPassport from './pages/application-status/passport';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
   {
     path: '/status-permohonan',
     page: ApplicationStatus,
+  },
+  {
+    path: '/status-permohonan/paspor',
+    page: ApplicationStatusPassport,
   },
 ];
 
