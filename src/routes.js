@@ -1,7 +1,8 @@
 import Home from './pages/home';
 import Login from './pages/login';
-import StatusPermohonan from './pages/statuspermohonan';
-import StatusPermohonanPaspor from './pages/statuspermohonan/statuspermohonanpaspor';
+import ServiceInformation from './pages/service-information';
+import ApplicationStatus from './pages/application-status';
+import ApplicationStatusPassport from './pages/application-status/passport';
 
 const routes = [
   {
@@ -13,12 +14,16 @@ const routes = [
     page: Login,
   },
   {
-    path: '/statusPermohonan',
-    page: StatusPermohonan,
+    path: '/informasi-layanan',
+    page: ServiceInformation,
   },
   {
-    path: '/statusPermohonan/paspor',
-    page: StatusPermohonanPaspor,
+    path: '/status-permohonan',
+    page: ApplicationStatus,
+  },
+  {
+    path: '/status-permohonan/paspor',
+    page: ApplicationStatusPassport,
   },
 ];
 

@@ -16,11 +16,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <h3>
+        <h3 style={{ color: '#fafafa', cursor: 'pointer' }}>
           <strong>Duta Layanan Keimigrasian</strong>
         </h3>
         <HeaderAction>
-          <h5>Logged in as admin</h5>
+          <h5 style={{ color: '#fafafa' }}>Logged in as admin</h5>
           <Button>Logout</Button>
         </HeaderAction>
       </HeaderContent>
@@ -31,9 +31,7 @@ const Header = () => {
 const SingleHeader = (props) => {
   return (
     <SingleHeaderContainer>
-      <SingleHeaderTitle color={props.color}>
-        DUTA LAYANAN <br /> KEIMIGRASIAN
-      </SingleHeaderTitle>
+      <SingleHeaderTitle color={props.color}>{props.title}</SingleHeaderTitle>
       <SingleHeaderLine />
     </SingleHeaderContainer>
   );
@@ -41,6 +39,7 @@ const SingleHeader = (props) => {
 
 SingleHeader.propTypes = {
   color: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export { SingleHeader };
