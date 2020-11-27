@@ -3,6 +3,7 @@ import Login from './pages/login';
 import ServiceInformation from './pages/service-information';
 import ApplicationStatus from './pages/application-status';
 import ApplicationStatusPassport from './pages/application-status/passport';
+import ApplicationStatusIzinTinggal from './pages/application-status/izintinggal';
 
 const routes = [
   {
@@ -24,6 +25,10 @@ const routes = [
   {
     path: '/status-permohonan/paspor',
     page: ApplicationStatusPassport,
+  },
+  {
+    path: '/status-permohonan/izin-tinggal',
+    page: ApplicationStatusIzinTinggal,
   },
 ];
 
