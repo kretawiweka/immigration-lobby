@@ -4,6 +4,8 @@ import ServiceInformation from './pages/service-information';
 import ApplicationStatus from './pages/application-status';
 import ApplicationStatusPassport from './pages/application-status/passport';
 import ApplicationStatusIzinTinggal from './pages/application-status/izintinggal';
+import UserAccount from './pages/user-account';
+import UserAccountAdd from './pages/user-account/add';
 
 const routes = [
   {
@@ -30,6 +32,14 @@ const routes = [
     path: '/status-permohonan/izin-tinggal',
     page: ApplicationStatusIzinTinggal,
   },
+  {
+    path: '/akun-pengguna',
+    page: UserAccount,
+  },
+  {
+    path: '/akun-pengguna/tambah',
+    page: UserAccountAdd,
+  }
 ];
 
 export default routes;
