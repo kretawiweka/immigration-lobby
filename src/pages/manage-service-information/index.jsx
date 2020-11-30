@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Select, Table, Space, Button } from 'antd';
 
 import Layout from '../../components/Layout';
 import { SingleHeader } from '../../components/Header';
+import { ModalCreate, ModalUpdate, ModalDelete } from './ModalData';
 import { SelectOptionArea, Content, TableArea, AddBtnArea } from './style';
 const { Option } = Select;
 const { Column } = Table;
 
 const ManageServiceInformation = () => {
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
-  };
-  const data = [
+  const [isVisibleModalCreate, setIsVisibleModalCreate] = useState(true);
+  const [isVisibleModaUpdate, setIsVisibleModalUpdate] = useState(false);
+  const [isVisibleModalDelete, setIsVisibleModalDelete] = useState(false);
+
+  const dataTable = [
     {
       key: '1',
       indo_service: 'Layanan Indonesia',
@@ -34,9 +36,38 @@ const ManageServiceInformation = () => {
       eng_description: 'New York No. 1 Lake Park',
     },
   ];
+
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+  };
+
+  const onChangeModalCreate = () => {
+    setIsVisibleModalCreate(!isVisibleModalCreate);
+  };
+
+  const onChangelModalUpdate = () => {
+    setIsVisibleModalUpdate(!isVisibleModaUpdate);
+  };
+
+  const onChangeModalDelete = () => {
+    setIsVisibleModalDelete(!isVisibleModalDelete);
+  };
+
   return (
     <>
       <Layout>
+        <ModalCreate
+          isVisible={isVisibleModalCreate}
+          onCancel={onChangeModalCreate}
+        />
+        <ModalUpdate
+          isVisible={isVisibleModaUpdate}
+          onCancel={onChangelModalUpdate}
+        />
+        <ModalDelete
+          isVisible={isVisibleModalDelete}
+          onCancel={onChangeModalDelete}
+        />
         <SingleHeader color="#fafafa" title="KELOLA INFORMASI LAYANAN" />
         <Content>
           <SelectOptionArea>
@@ -71,11 +102,11 @@ const ManageServiceInformation = () => {
           </SelectOptionArea>
           <TableArea>
             <AddBtnArea>
-              <Button>Tambah</Button>
+              <Button onClick={onChangeModalCreate}>Tambah</Button>
             </AddBtnArea>
-            <Table dataSource={data}>
+            <Table dataSource={dataTable}>
               <Column
-                title="Nama Layanan Indo"
+                title="Nama Layanan Indonesia"
                 dataIndex="indo_service"
                 key="indo_service"
               />
@@ -99,8 +130,12 @@ const ManageServiceInformation = () => {
                 key="action"
                 render={(text, record) => (
                   <Space size="middle">
-                    <a href="/">Edit</a>
-                    <a href="/">Delete</a>
+                    <Button onClick={onChangelModalUpdate} type="link">
+                      Ubah
+                    </Button>
+                    <Button onClick={onChangeModalDelete} type="link">
+                      Hapus
+                    </Button>
                   </Space>
                 )}
               />
