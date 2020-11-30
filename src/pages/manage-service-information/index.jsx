@@ -99,8 +99,8 @@ const ManageServiceInformation = () => {
                 key="action"
                 render={(text, record) => (
                   <Space size="middle">
-                    <a>Edit</a>
-                    <a>Delete</a>
+                    <a href="/">Edit</a>
+                    <a href="/">Delete</a>
                   </Space>
                 )}
               />

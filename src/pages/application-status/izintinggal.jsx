@@ -15,7 +15,7 @@ import {
 } from 'antd';
 
 import Layout from '../../components/Layout';
-import { ContentPassport, BreadCrumbContainer } from './style';
+import { ContentIzinTinggal, BreadCrumbContainer } from './style';
 
 function onChange(date, dateString) {
   console.log(date, dateString);
@@ -24,24 +24,24 @@ function onChange(date, dateString) {
 const { Title } = Typography;
 const { Step } = Steps;
 
-const ApplicationStatusPassport = () => {
+const ApplicationStatusIzinTinggal = () => {
   return (
     <>
       <Layout>
-        <ContentPassport>
+        <ContentIzinTinggal>
           <BreadCrumbContainer>
             <Breadcrumb>
               <Breadcrumb.Item>Beranda</Breadcrumb.Item>
               <Breadcrumb.Item>Status Permohonan</Breadcrumb.Item>
               <Breadcrumb.Item>
-                <strong>Paspor</strong>
+                <strong>Izin Tinggal</strong>
               </Breadcrumb.Item>
             </Breadcrumb>
           </BreadCrumbContainer>
 
           <Card>                  
             <Row>
-              <Title level={4}>Pengecekan Status Permohonan Paspor</Title>
+              <Title level={4}>Pengecekan Status Permohonan Izin Tinggal</Title>
             </Row>
             <hr></hr>
             <br></br>
@@ -74,7 +74,7 @@ const ApplicationStatusPassport = () => {
                 <Col span={20}>
                   <Form.Item>
                     <Input
-                      placeholder="Kantor Imigrasi Kelas I Jakarta Selatan"
+                      placeholder="Kantor Imigrasi Kelas I Ngurah Rai"
                       disabled
                     />
                   </Form.Item>
@@ -99,7 +99,7 @@ const ApplicationStatusPassport = () => {
                 <center>
                   <Image
                     style={{ width: '100%', margin: 25, border: '1px solid black' }}
-                    src="https://www.dfa.ie/media/dfa/passport/passportphotographs/photojpen-117-300x450.jpg"
+                    src="https://bbpsdmp-medan.kominfo.go.id/wp-content/uploads/2019/04/PAS%20PHOTO13.jpg"
                   /> 
                 </center>
                 <hr></hr>                   
@@ -110,22 +110,32 @@ const ApplicationStatusPassport = () => {
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Nama Lengkap</Col>
-                  <Col span={15}><strong>Supriyadi Munawar Akbar</strong></Col>
+                  <Col span={15}><strong>Aisyah Aminati Bt Djafar Malek</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
-                  <Col span={8}>NIK</Col>
-                  <Col span={15}><strong>3275071208710031</strong></Col>
+                  <Col span={8}>NIORA</Col>
+                  <Col span={15}><strong>W7PXY192P</strong></Col>
+                </Row>
+                <Row>
+                  <Col span={1}></Col>
+                  <Col span={8}>Tempat, Tanggal Lahir</Col>
+                  <Col span={15}><strong>Perlis, 03 Februari 1990</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Jenis Kelamin</Col>
-                  <Col span={15}><strong>Laki-Laki</strong></Col>
+                  <Col span={15}><strong>Perempuan</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
-                  <Col span={8}>Tempat Tanggal Lahir</Col>
-                  <Col span={15}><strong>Jakarta, 12 Agustus 1971</strong></Col>
+                  <Col span={8}>Nomor Paspor</Col>
+                  <Col span={15}><strong>TX193809</strong></Col>
+                </Row>
+                <Row>
+                  <Col span={1}></Col>
+                  <Col span={8}>Kewarganegaraan</Col>
+                  <Col span={15}><strong>Malaysia</strong></Col>
                 </Row>
                 <br></br>
                 <hr></hr>
@@ -137,38 +147,38 @@ const ApplicationStatusPassport = () => {
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Nomor Permohonan</Col>
-                  <Col span={15}><strong>129120000000023810</strong></Col>
+                  <Col span={15}><strong>32918710000000381</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Lokasi Permohonan</Col>
-                  <Col span={15}><strong>Kantor Imigrasi Kelas I Jakarta Selatan</strong></Col>
+                  <Col span={15}><strong>Kantor Imigrasi Kelas I Ngurah Rai</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Tanggal Permohonan</Col>
-                  <Col span={15}><strong>15 November 2020 pukul 10:04:39</strong></Col>
+                  <Col span={15}><strong>28 November 2020 pukul 10:04:39</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Tanggal Pembayaran</Col>
-                  <Col span={15}><strong>17 November 2020 pukul 15:04:39</strong></Col>
+                  <Col span={15}><strong>03 Desember 2020 pukul 09:13:40</strong></Col>
                 </Row>
                 <br></br>
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Jenis Produk</Col>
-                  <Col span={15}><strong>Paspor Elektronik 48 Halaman</strong></Col>
+                  <Col span={15}><strong>ITAS</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Jenis Permohonan</Col>
-                  <Col span={15}><strong>Baru</strong></Col>
+                  <Col span={15}><strong>Perpanjangan ke-1 masa berlaku 2 Tahun</strong></Col>
                 </Row>
                 <Row>
                   <Col span={1}></Col>
                   <Col span={8}>Tujuan Permohonan</Col>
-                  <Col span={15}><strong>Wisata</strong></Col>
+                  <Col span={15}><strong>Pertukaran Mahasiswi (Pendidikan)</strong></Col>
                 </Row>
               </Col>
               <Col span={2}></Col>
@@ -179,15 +189,15 @@ const ApplicationStatusPassport = () => {
                   <Col span={2}></Col>
                   <Col span={22}>
                     <Steps direction="vertical" current={6} percent={50}>
-                      <Step title="1. Penginputan Data" description="Selesai pada tanggal 15 November 2021 pukul 10:04:39" />
-                      <Step title="2. Pengambilan Biometrik" description="Selesai pada tanggal 15 November 2021 pukul 10:23:01" />
-                      <Step title="3. Pelaksanaan Wawancara" description="Selesai pada tanggal 15 November 2021 pukul 10:25:58" />
-                      <Step title="4. Pembayaran Biaya Permohonan" description="Selesai pada tanggal 17 November 2021 pukul 15:04:39" />
-                      <Step title="5. Pengadjudikasian Permohonan" description="Selesai pada tanggal 18 November 2021 pukul 08:03:21" />
-                      <Step title="6. Pengalokasian Paspor" description="Selesai pada tanggal 18 November 2021 pukul 13:14:47" />
-                      <Step title="Pencetakan Paspor" subTitle="(Sedang diproses)" />
-                      <Step title="Pengujian Kualitas Paspor" description="" />
-                      <Step title="Penyerahan Paspor" description="" />
+                      <Step title="1. Pengecekan Berkas dan Pencetakan Resi" description="Selesai pada tanggal 28 November 2021 pukul 10:04:39" />
+                      <Step title="2. Pemeriksaan Daftar Cekal" description="Selesai pada tanggal 28 November 2021 pukul 10:23:01" />
+                      <Step title="3. Pemindaian Berkas Dokumen" description="Selesai pada tanggal 28 November 2021 pukul 10:25:58" />
+                      <Step title="4. Pemeriksaan Penjamin" description="Selesai pada tanggal 28 November 2021 pukul 15:04:39" />
+                      <Step title="5. Pengambilan Data Biometrik" description="Selesai pada tanggal 28 November 2021 pukul 08:03:21" />
+                      <Step title="6. Transaksi Pembayaran" description="Selesai pada tanggal 03 Desember 2021 pukul 13:14:47" />
+                      <Step title="Persetujuan Izin Tinggal" subTitle="(Sedang diproses)" />
+                      <Step title="Penerbitan Nomor Register" description="" />
+                      <Step title="Pemindaian Dokumen Selesai" description="" />
                       <Step title="Selesai" description="" />
                     </Steps>
                   </Col>
@@ -201,7 +211,7 @@ const ApplicationStatusPassport = () => {
                   <Col span={2}></Col>
                   <Col span={3}>Tanggal</Col>
                   <Col span={5}>
-                    <Input placeholder="25 November 2020" disabled />
+                    <Input placeholder="06 Desember 2020" disabled />
                   </Col>
                   <Col span={1}></Col>
                   &emsp;
@@ -244,10 +254,10 @@ const ApplicationStatusPassport = () => {
             </Row>
             <br></br>
           </Card>
-        </ContentPassport>
+        </ContentIzinTinggal>
       </Layout>
     </>
   );
 };
 
-export default ApplicationStatusPassport;
+export default ApplicationStatusIzinTinggal;

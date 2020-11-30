@@ -5,6 +5,7 @@ import ServiceInformation from './pages/service-information';
 /** /status-permohonan */
 import ApplicationStatus from './pages/application-status';
 import ApplicationStatusPassport from './pages/application-status/passport';
+import ApplicationStatusIzinTinggal from './pages/application-status/izintinggal';
 /** /laporan */
 import Report from './pages/report';
 /** /kelola-informasi-layanan */
@@ -38,6 +39,10 @@ const routes = [
   {
     path: '/laporan',
     page: Report,
+  },
+  {
+    path: '/status-permohonan/izin-tinggal',
+    page: ApplicationStatusIzinTinggal,
   },
 ];
 
