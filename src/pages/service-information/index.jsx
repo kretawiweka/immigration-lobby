@@ -1,38 +1,28 @@
 import React from 'react';
 
 import Card from '../../components/Card';
-import Hero from '../../components/Hero';
 import Layout from '../../components/Layout';
 import { SingleHeader } from '../../components/Header';
 import { Content, CardContent, CardTitle } from './style';
 
-const HomePage = () => {
+const ServiceInformation = () => {
   return (
     <>
       <Layout>
-        <Hero />
-        <SingleHeader color="#fafafa" title="LAYANAN KEIMIGRASIAN" />
+        <SingleHeader color="#fafafa" title="INFORMASI LAYANAN" />
         <Content>
           <CardContent>
             <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Informasi Layanan</CardTitle>
+              <CardTitle>Paspor</CardTitle>
             </Card>
             <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Online Chat</CardTitle>
+              <CardTitle>Izin Tinggal</CardTitle>
             </Card>
             <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Status Permohonan</CardTitle>
-            </Card>
-          </CardContent>
-          <CardContent>
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Kelola Informasi Layanan</CardTitle>
+              <CardTitle>Visa</CardTitle>
             </Card>
             <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Layanan</CardTitle>
-            </Card>
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Akun</CardTitle>
+              <CardTitle>Kelola Layanan</CardTitle>
             </Card>
           </CardContent>
         </Content>
@@ -41,4 +31,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default ServiceInformation;

@@ -1,12 +1,21 @@
 import React from 'react';
-
+import {
+  HeroContaier,
+  HeroImage,
+  HeroTitle,
+  HeroLayer,
+  HeroSub,
+} from './style';
+import HeroBackground from '../../assets/images/hero-bg.jpeg';
 const Hero = () => {
   return (
     <>
-      <img
-        src="https://images.unsplash.com/photo-1519219788971-8d9797e0928e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1028&q=80"
-        alt="hero-background"
-      />
+      <HeroContaier>
+        <HeroLayer />
+        <HeroTitle>Hai, Ayu</HeroTitle>
+        <HeroSub>Pilih layanan keimigrasian yang diinginkan</HeroSub>
+        <HeroImage src={HeroBackground} alt="hero-background" />
+      </HeroContaier>
     </>
   );
 };
