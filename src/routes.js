@@ -8,6 +8,9 @@ import ApplicationStatusPassport from './pages/application-status/passport';
 import ApplicationStatusIzinTinggal from './pages/application-status/izintinggal';
 /** /laporan */
 import Report from './pages/report';
+import FrequesntlyAsk from './pages/report/frequently-ask';
+import InformationCounter from './pages/report/information-counter';
+import OfficerPerformance from './pages/report/officer-performance';
 /** /kelola-informasi-layanan */
 import ManageServiceInformation from './pages/manage-service-information';
 
@@ -39,6 +42,18 @@ const routes = [
   {
     path: '/laporan',
     page: Report,
+  },
+  {
+    path: '/laporan/informasi-sering-ditanyakan',
+    page: FrequesntlyAsk,
+  },
+  {
+    path: '/laporan/pusat-informasi',
+    page: InformationCounter,
+  },
+  {
+    path: '/laporan/peforma-petugas',
+    page: OfficerPerformance,
   },
   {
     path: '/status-permohonan/izin-tinggal',

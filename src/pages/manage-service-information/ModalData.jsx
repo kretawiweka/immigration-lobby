@@ -3,6 +3,11 @@ import { Modal, Form, Input, Button } from 'antd';
 
 const { TextArea } = Input;
 
+const layout = {
+  labelCol: { span: 10 },
+  wrapperCol: { span: 16 },
+};
+
 const ModalCreate = ({ isVisible, onCancel }) => {
   return (
     <Modal
@@ -12,6 +17,7 @@ const ModalCreate = ({ isVisible, onCancel }) => {
       footer={[]}
     >
       <Form
+        {...layout}
         name="basic"
         initialValues={{ remember: true }}
         onFinish={() => {}}
@@ -66,6 +72,7 @@ const ModalUpdate = ({ isVisible, onCancel }) => {
       footer={[]}
     >
       <Form
+        {...layout}
         name="basic"
         initialValues={{ remember: true }}
         onFinish={() => {}}
