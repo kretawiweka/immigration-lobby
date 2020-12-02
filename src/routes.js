@@ -16,6 +16,12 @@ import InformationCounter from './pages/report/information-counter';
 import OfficerPerformance from './pages/report/officer-performance';
 /** /kelola-informasi-layanan */
 import ManageServiceInformation from './pages/manage-service-information';
+/** /online-chat */
+import ChatRoomList from './pages/online-chat/chatroomlist';
+import ChatRoom from './pages/online-chat/chatroom';
+import StartChatRoom from './pages/online-chat/startchatroom';
+import StartChatRoomAlt from './pages/online-chat/startchatroomalt';
+import ChatRoomOver from './pages/online-chat/chatroomover';
 
 const routes = [
   {
@@ -69,6 +75,26 @@ const routes = [
   {
     path: '/akun-pengguna/tambah',
     page: UserAccountAdd,
+  },
+  {
+    path: '/online-chat/room-list',
+    page: ChatRoomList,
+  },
+  {
+    path: '/online-chat/room',
+    page: ChatRoom,
+  },
+  {
+    path: '/online-chat/start-room',
+    page: StartChatRoom,
+  },
+  {
+    path: '/online-chat/start-room/alt',
+    page: StartChatRoomAlt,
+  },
+  {
+    path: '/online-chat/room/over',
+    page: ChatRoomOver,
   },
 ];
 
