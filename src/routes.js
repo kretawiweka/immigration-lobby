@@ -6,6 +6,9 @@ import ServiceInformation from './pages/service-information';
 import ApplicationStatus from './pages/application-status';
 import ApplicationStatusPassport from './pages/application-status/passport';
 import ApplicationStatusIzinTinggal from './pages/application-status/izintinggal';
+/** /akun-pengguna */
+import UserAccount from './pages/user-account';
+import UserAccountAdd from './pages/user-account/add';
 /** /laporan */
 import Report from './pages/report';
 import FrequesntlyAsk from './pages/report/frequently-ask';
@@ -64,6 +67,14 @@ const routes = [
   {
     path: '/status-permohonan/izin-tinggal',
     page: ApplicationStatusIzinTinggal,
+  },
+  {
+    path: '/akun-pengguna',
+    page: UserAccount,
+  },
+  {
+    path: '/akun-pengguna/tambah',
+    page: UserAccountAdd,
   },
   {
     path: '/online-chat/room-list',
