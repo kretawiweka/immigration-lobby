@@ -12,7 +12,6 @@ const SelectOptionArea = styled.div`
   max-width: 420px;
   margin: 14px auto;
   h4 {
-    color: #fafafa;
     margin: 0;
   }
 `;

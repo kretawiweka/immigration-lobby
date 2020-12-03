@@ -49,6 +49,10 @@ const routes = [
     page: ApplicationStatusPassport,
   },
   {
+    path: '/status-permohonan/izin-tinggal',
+    page: ApplicationStatusIzinTinggal,
+  },
+  {
     path: '/laporan',
     page: Report,
   },
@@ -64,10 +68,7 @@ const routes = [
     path: '/laporan/peforma-petugas',
     page: OfficerPerformance,
   },
-  {
-    path: '/status-permohonan/izin-tinggal',
-    page: ApplicationStatusIzinTinggal,
-  },
+
   {
     path: '/akun-pengguna',
     page: UserAccount,
