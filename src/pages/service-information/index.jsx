@@ -9,7 +9,7 @@ const ServiceInformation = () => {
   return (
     <>
       <Layout>
-        <SingleHeader color="#fafafa" title="INFORMASI LAYANAN" />
+        <SingleHeader title="INFORMASI LAYANAN" />
         <Content>
           <CardContent>
             <Card backgroundColor="#749AA9" width="240px">

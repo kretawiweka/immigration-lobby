@@ -24,6 +24,7 @@ const ContentUserAccount = styled.div`
   diplay: flex;
   flex-direction: column;
   margin: 14px 28px 105px 28px;
+  padding-bottom: 28px;
 `;
 
 const BreadCrumbContainer = styled.div`

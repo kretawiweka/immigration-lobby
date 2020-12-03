@@ -9,7 +9,7 @@ const { Option } = Select;
 const { Column } = Table;
 
 const ManageServiceInformation = () => {
-  const [isVisibleModalCreate, setIsVisibleModalCreate] = useState(true);
+  const [isVisibleModalCreate, setIsVisibleModalCreate] = useState(false);
   const [isVisibleModaUpdate, setIsVisibleModalUpdate] = useState(false);
   const [isVisibleModalDelete, setIsVisibleModalDelete] = useState(false);
 
@@ -68,7 +68,7 @@ const ManageServiceInformation = () => {
           isVisible={isVisibleModalDelete}
           onCancel={onChangeModalDelete}
         />
-        <SingleHeader color="#fafafa" title="KELOLA INFORMASI LAYANAN" />
+        <SingleHeader title="KELOLA INFORMASI LAYANAN" />
         <Content>
           <SelectOptionArea>
             <h4>Kategori Informasi</h4>

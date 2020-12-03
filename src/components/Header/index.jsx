@@ -16,11 +16,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <h3 style={{ color: '#fafafa', cursor: 'pointer' }}>
+        <h3 style={{ cursor: 'pointer' }}>
           <strong>Duta Layanan Keimigrasian</strong>
         </h3>
         <HeaderAction>
-          <h5 style={{ color: '#fafafa' }}>Logged in as admin</h5>
+          <h5>Logged in as admin</h5>
           <Button>Logout</Button>
         </HeaderAction>
       </HeaderContent>

@@ -26,19 +26,18 @@ const { Step } = Steps;
 
 const ApplicationStatusPassport = () => {
   return (
-    <>
-      <Layout>
-        <ContentPassport>
-          <BreadCrumbContainer>
-            <Breadcrumb>
-              <Breadcrumb.Item>Beranda</Breadcrumb.Item>
-              <Breadcrumb.Item>Status Permohonan</Breadcrumb.Item>
-              <Breadcrumb.Item>
-                <strong>Paspor</strong>
-              </Breadcrumb.Item>
-            </Breadcrumb>
-          </BreadCrumbContainer>
-
+    <Layout>
+      <ContentPassport>
+        <BreadCrumbContainer>
+          <Breadcrumb>
+            <Breadcrumb.Item>Beranda</Breadcrumb.Item>
+            <Breadcrumb.Item>Status Permohonan</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <strong>Paspor</strong>
+            </Breadcrumb.Item>
+          </Breadcrumb>
+        </BreadCrumbContainer>
+        <div style={{ margin: '14px 0' }}>
           <Card>
             <Row>
               <Title level={4}>Pengecekan Status Permohonan Paspor</Title>
@@ -91,7 +90,8 @@ const ApplicationStatusPassport = () => {
               </Button>
             </Form>
           </Card>
-          <br></br>
+        </div>
+        <div style={{ margin: '14px 0' }}>
           <Card title="Hasil Pencarian">
             <Row>
               <Col span={1}></Col>
@@ -291,11 +291,10 @@ const ApplicationStatusPassport = () => {
                 </Row>
               </Col>
             </Row>
-            <br></br>
           </Card>
-        </ContentPassport>
-      </Layout>
-    </>
+        </div>
+      </ContentPassport>
+    </Layout>
   );
 };
 

@@ -24,12 +24,14 @@ const ContentPassport = styled.div`
   diplay: flex;
   flex-direction: column;
   margin: 14px 28px 105px 28px;
+  padding-bottom: 28px;
 `;
 
 const ContentIzinTinggal = styled.div`
   diplay: flex;
   flex-direction: column;
   margin: 14px 28px 105px 28px;
+  padding-bottom: 14px;
 `;
 
 const BreadCrumbContainer = styled.div`

@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
 const HeaderContainer = styled.div`
-  border-bottom: 2px solid #8fc1e3;
+  border-bottom: 3.5px solid #749aa9;
 `;
 
 const HeaderContent = styled.div`
   padding: 17.5px;
-  background-color: #323232;
+  background-color: #ffffff;
   min-height: 70px;
   display: flex;
   align-items: center;

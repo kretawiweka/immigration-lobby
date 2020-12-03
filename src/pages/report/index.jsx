@@ -8,7 +8,7 @@ const Report = () => {
   return (
     <>
       <Layout>
-        <SingleHeader color="#fafafa" title="LAPORAN" />
+        <SingleHeader title="LAPORAN" />
         <Content>
           <CardContent>
             <Card backgroundColor="#749AA9" width="240px">

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../../components/Layout';
 import { ContentUserAccount, BreadCrumbContainer } from './style';
-// import { SingleHeader } from '../../components/Header';
+
 import {
   Breadcrumb,
   Typography,
@@ -95,7 +95,7 @@ const columns = [
         <Button
           htmlType="submit"
           className="login-form-button"
-          icon={< DeleteOutlined />}
+          icon={<DeleteOutlined />}
           size="small"
           danger
         >
@@ -170,7 +170,6 @@ function onChange(pagination, filters, sorter, extra) {
 
 const state = { visible: false };
 const UserAccount = () => {
-
   return (
     <>
       <Layout>
@@ -178,10 +177,12 @@ const UserAccount = () => {
           <BreadCrumbContainer>
             <Breadcrumb>
               <Breadcrumb.Item>Beranda</Breadcrumb.Item>
-              <Breadcrumb.Item><strong>Akun Pengguna</strong></Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <strong>Akun Pengguna</strong>
+              </Breadcrumb.Item>
             </Breadcrumb>
           </BreadCrumbContainer>
-          <Card>                  
+          <Card>
             <Row>
               <Col span={20}>
                 <Title level={4}>Akun Pengguna</Title>
@@ -192,7 +193,7 @@ const UserAccount = () => {
                   htmlType="submit"
                   className="login-form-button"
                   size="large"
-                  style={{ float: "right"}}
+                  style={{ float: 'right' }}
                 >
                   <strong>Tambah</strong>
                 </Button>
@@ -200,7 +201,12 @@ const UserAccount = () => {
             </Row>
             <hr></hr>
             <br></br>
-            <Table columns={columns} dataSource={data} onChange={onChange} bordered/>
+            <Table
+              columns={columns}
+              dataSource={data}
+              onChange={onChange}
+              bordered
+            />
           </Card>
         </ContentUserAccount>
       </Layout>

@@ -9,7 +9,7 @@ const ApplicationStatus = () => {
   return (
     <>
       <Layout>
-        <SingleHeader color="#fafafa" title="STATUS PERMOHONAN" />
+        <SingleHeader title="STATUS PERMOHONAN" />
         <Content>
           <CardContent>
             <Card backgroundColor="#749AA9" width="240px">

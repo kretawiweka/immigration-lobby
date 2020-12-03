@@ -19,15 +19,10 @@ const Login = () => {
         <SingleHeader color="#fafafa" title="DUTA LAYANAN KEIMIGRASIAN" />
         <Content>
           <CardContainer>
-            <Card
-              bodyStyle={{
-                backgroundColor: '#323232',
-              }}
-              bordered={false}
-            >
+            <Card bordered={false}>
               <Form className="login-form" layout="vertical">
                 <Form.Item>
-                  <h4 style={{ color: '#fafafa' }}>Username:</h4>
+                  <h4>Username:</h4>
                   <Input
                     prefix={
                       <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
@@ -36,7 +31,7 @@ const Login = () => {
                   />
                 </Form.Item>
                 <Form.Item>
-                  <h4 style={{ color: '#fafafa' }}>Password:</h4>
+                  <h4>Password:</h4>
                   <Input
                     prefix={
                       <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />
@@ -46,13 +41,9 @@ const Login = () => {
                   />
                 </Form.Item>
                 <Row>
-                  <Form.Item
-                    bodyStyle={{
-                      color: '#fafafa',
-                    }}
-                  >
+                  <Form.Item>
                     <Checkbox>
-                      <span style={{ color: '#fafafa' }}>Ingat Saya</span>
+                      <span>Ingat Saya</span>
                     </Checkbox>
                   </Form.Item>
                 </Row>
