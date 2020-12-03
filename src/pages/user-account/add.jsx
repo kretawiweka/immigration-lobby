@@ -24,9 +24,6 @@ import {
 const { Title } = Typography;
 const { Option } = Select;
 
-function onChange(pagination, filters, sorter, extra) {
-  console.log('params', pagination, filters, sorter, extra);
-}
 function onChangeSelect(value) {
   console.log(`selected ${value}`);
 }
@@ -43,7 +40,6 @@ function onSearch(val) {
   console.log('search:', val);
 }
 
-const state = { visible: false };
 const UserAccountAdd = () => {
   return (
     <>
