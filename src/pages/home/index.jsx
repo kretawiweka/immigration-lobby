@@ -19,31 +19,31 @@ const HomePage = () => {
               <CardTitle>Informasi Layanan</CardTitle>
             </Card>
           </Link>
-          <Link to="/online-chat/start-room">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Online Chat</CardTitle>
-            </Card>
-          </Link>
           <Link to="/status-permohonan">
             <Card backgroundColor="#749AA9" width="240px">
               <CardTitle>Status Permohonan</CardTitle>
             </Card>
           </Link>
+          <Link to="/laporan">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Laporan</CardTitle>
+            </Card>
+          </Link>
         </CardContent>
         <CardContent>
+          <Link to="/akun-pengguna">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Akun Pengguna</CardTitle>
+            </Card>
+          </Link>
           <Link to="/kelola-informasi-layanan">
             <Card backgroundColor="#749AA9" width="240px">
               <CardTitle>Kelola Informasi Layanan</CardTitle>
             </Card>
           </Link>
-          <Link to="/informasi-layanan">
+          <Link to="/online-chat/start-room">
             <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Informasi Layanan</CardTitle>
-            </Card>
-          </Link>
-          <Link to="/akun-pengguna">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Akun Pengguna</CardTitle>
+              <CardTitle>Online Chat</CardTitle>
             </Card>
           </Link>
         </CardContent>

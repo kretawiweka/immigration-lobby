@@ -57,7 +57,7 @@ const privateRoutes = [
     page: FrequesntlyAsk,
   },
   {
-    path: '/laporan/pusat-informasi',
+    path: '/laporan/rekam-counter',
     page: InformationCounter,
   },
   {

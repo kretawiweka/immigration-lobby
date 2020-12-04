@@ -43,7 +43,7 @@ const InformationCounter = () => {
               <Breadcrumb.Item>Beranda</Breadcrumb.Item>
               <Breadcrumb.Item>Laporan</Breadcrumb.Item>
               <Breadcrumb.Item>
-                <strong>Informasi Sering Ditanyakan</strong>
+                <strong>Rekam Counter</strong>
               </Breadcrumb.Item>
             </Breadcrumb>
           </BreadCrumbContainer>
