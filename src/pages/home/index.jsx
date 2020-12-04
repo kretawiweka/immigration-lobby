@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '../../components/Card';
 import Hero from '../../components/Hero';
@@ -13,26 +14,38 @@ const HomePage = () => {
       <SingleHeader title="LAYANAN KEIMIGRASIAN" />
       <Content>
         <CardContent>
-          <Card backgroundColor="#749AA9" width="240px">
-            <CardTitle>Informasi Layanan</CardTitle>
-          </Card>
-          <Card backgroundColor="#749AA9" width="240px">
-            <CardTitle>Online Chat</CardTitle>
-          </Card>
-          <Card backgroundColor="#749AA9" width="240px">
-            <CardTitle>Status Permohonan</CardTitle>
-          </Card>
+          <Link to="/informasi-layanan">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Informasi Layanan</CardTitle>
+            </Card>
+          </Link>
+          <Link to="/online-chat/start-room">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Online Chat</CardTitle>
+            </Card>
+          </Link>
+          <Link to="/status-permohonan">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Status Permohonan</CardTitle>
+            </Card>
+          </Link>
         </CardContent>
         <CardContent>
-          <Card backgroundColor="#749AA9" width="240px">
-            <CardTitle>Kelola Informasi Layanan</CardTitle>
-          </Card>
-          <Card backgroundColor="#749AA9" width="240px">
-            <CardTitle>Layanan</CardTitle>
-          </Card>
-          <Card backgroundColor="#749AA9" width="240px">
-            <CardTitle>Akun</CardTitle>
-          </Card>
+          <Link to="/kelola-informasi-layanan">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Kelola Informasi Layanan</CardTitle>
+            </Card>
+          </Link>
+          <Link to="/informasi-layanan">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Informasi Layanan</CardTitle>
+            </Card>
+          </Link>
+          <Link to="/akun-pengguna">
+            <Card backgroundColor="#749AA9" width="240px">
+              <CardTitle>Akun Pengguna</CardTitle>
+            </Card>
+          </Link>
         </CardContent>
       </Content>
     </Layout>

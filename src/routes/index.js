@@ -1,36 +1,32 @@
-import Home from './pages/home';
-import Login from './pages/login';
+import Login from '../pages/login';
+import Home from '../pages/home';
 /** /informasi layanan */
-import ServiceInformation from './pages/service-information';
+import ServiceInformation from '../pages/service-information';
 /** /status-permohonan */
-import ApplicationStatus from './pages/application-status';
-import ApplicationStatusPassport from './pages/application-status/passport';
-import ApplicationStatusIzinTinggal from './pages/application-status/izintinggal';
+import ApplicationStatus from '../pages/application-status';
+import ApplicationStatusPassport from '../pages/application-status/passport';
+import ApplicationStatusIzinTinggal from '../pages/application-status/izintinggal';
 /** /akun-pengguna */
-import UserAccount from './pages/user-account';
-import UserAccountAdd from './pages/user-account/add';
+import UserAccount from '../pages/user-account';
+import UserAccountAdd from '../pages/user-account/add';
 /** /laporan */
-import Report from './pages/report';
-import FrequesntlyAsk from './pages/report/frequently-ask';
-import InformationCounter from './pages/report/information-counter';
-import OfficerPerformance from './pages/report/officer-performance';
+import Report from '../pages/report';
+import FrequesntlyAsk from '../pages/report/frequently-ask';
+import InformationCounter from '../pages/report/information-counter';
+import OfficerPerformance from '../pages/report/officer-performance';
 /** /kelola-informasi-layanan */
-import ManageServiceInformation from './pages/manage-service-information';
+import ManageServiceInformation from '../pages/manage-service-information';
 /** /online-chat */
-import ChatRoomList from './pages/online-chat/chatroomlist';
-import ChatRoom from './pages/online-chat/chatroom';
-import StartChatRoom from './pages/online-chat/startchatroom';
-import StartChatRoomAlt from './pages/online-chat/startchatroomalt';
-import ChatRoomOver from './pages/online-chat/chatroomover';
+import ChatRoomList from '../pages/online-chat/chatroomlist';
+import ChatRoom from '../pages/online-chat/chatroom';
+import StartChatRoom from '../pages/online-chat/startchatroom';
+import StartChatRoomAlt from '../pages/online-chat/startchatroomalt';
+import ChatRoomOver from '../pages/online-chat/chatroomover';
 
-const routes = [
+const privateRoutes = [
   {
     path: '/',
     page: Home,
-  },
-  {
-    path: '/login',
-    page: Login,
   },
   {
     path: '/informasi-layanan',
@@ -99,4 +95,11 @@ const routes = [
   },
 ];
 
-export default routes;
+const publicRoutes = [
+  {
+    path: '/login',
+    page: Login,
+  },
+];
+
+export { privateRoutes, publicRoutes };
