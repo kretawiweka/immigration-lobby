@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '../../components/Card';
 import Layout from '../../components/Layout';
@@ -12,12 +13,16 @@ const ApplicationStatus = () => {
         <SingleHeader title="STATUS PERMOHONAN" />
         <Content>
           <CardContent>
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Paspor</CardTitle>
-            </Card>
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Izin Tinggal</CardTitle>
-            </Card>
+            <Link to="/status-permohonan/paspor">
+              <Card backgroundColor="#749AA9" width="240px">
+                <CardTitle>Paspor</CardTitle>
+              </Card>
+            </Link>
+            <Link to="/status-permohonan/izin-tinggal">
+              <Card backgroundColor="#749AA9" width="240px">
+                <CardTitle>Izin Tinggal</CardTitle>
+              </Card>
+            </Link>
           </CardContent>
         </Content>
       </Layout>

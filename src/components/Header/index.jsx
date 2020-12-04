@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { Button } from 'antd';
+import { Link } from 'react-router-dom';
+
+import { removeAuth } from '../../utils/auth';
 
 import {
   HeaderContainer,
@@ -13,15 +15,22 @@ import {
 } from './style';
 
 const Header = () => {
+  const onLogout = () => {
+    removeAuth();
+    window.location.href = '/login';
+  };
+
   return (
     <HeaderContainer>
       <HeaderContent>
-        <h3 style={{ cursor: 'pointer' }}>
-          <strong>Duta Layanan Keimigrasian</strong>
-        </h3>
+        <Link to="/">
+          <h3 style={{ cursor: 'pointer' }}>
+            <strong>Duta Layanan Keimigrasian</strong>
+          </h3>
+        </Link>
         <HeaderAction>
           <h5>Logged in as admin</h5>
-          <Button>Logout</Button>
+          <Button onClick={onLogout}>Logout</Button>
         </HeaderAction>
       </HeaderContent>
     </HeaderContainer>

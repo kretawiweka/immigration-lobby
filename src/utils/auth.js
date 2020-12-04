@@ -1,5 +1,19 @@
-const setAuth = () => {};
+import { setLocalStorage, getLocalStorage } from './localStorage';
 
-const isAuth = () => {};
+const checkAuth = () => {
+  if (getLocalStorage('auth') == null) return false;
+  return true;
+};
 
-export { setAuth, isAuth };
+const setAuth = (value) => {
+  setLocalStorage('auth', value, {
+    time: 14,
+    type: 'day',
+  });
+};
+
+const removeAuth = () => {
+  localStorage.removeItem('auth');
+};
+
+export { checkAuth, setAuth, removeAuth };

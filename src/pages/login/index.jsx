@@ -1,7 +1,9 @@
-import React from 'react';
-import { Form, Input, Button, Checkbox, Row, Card } from 'antd';
-import Icon from '@ant-design/icons';
+import React, { useState } from 'react';
+import { Form, Input, Button, Checkbox, Card, Row, Alert } from 'antd';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+
 import HeroBackground from '../../assets/images/hero-bg.jpeg';
+import { setAuth } from '../../utils/auth';
 
 import { SingleHeader } from '../../components/Header';
 import {
@@ -12,7 +14,32 @@ import {
   LoginContainer,
 } from './style';
 
+const ACCOUNT = {
+  username: 'admin',
+  password: 'admin',
+};
+
 const Login = () => {
+  const [alertVisible, setAlertVisible] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+  const handleAlertClose = () => {
+    setAlertVisible(false);
+  };
+  const onFormSubmit = (values) => {
+    if (
+      values.username === ACCOUNT.username &&
+      values.password === ACCOUNT.password
+    ) {
+      setAuth({
+        username: values.username,
+      });
+      window.location.href = '/';
+    } else {
+      setAlertVisible(true);
+      setAlertMessage('Username dan Password tidak sesuai.');
+    }
+  };
+
   return (
     <>
       <LoginContainer>
@@ -20,41 +47,58 @@ const Login = () => {
         <Content>
           <CardContainer>
             <Card bordered={false}>
-              <Form className="login-form" layout="vertical">
-                <Form.Item>
-                  <h4>Username:</h4>
+              {alertVisible ? (
+                <div style={{ marginBottom: '14px' }}>
+                  <Alert
+                    message={alertMessage}
+                    type="error"
+                    closable
+                    afterClose={handleAlertClose}
+                  />
+                </div>
+              ) : null}
+              <Form
+                name="normal_login"
+                className="login-form"
+                initialValues={{ remember: true }}
+                onFinish={onFormSubmit}
+              >
+                <Form.Item
+                  name="username"
+                  rules={[
+                    { required: true, message: 'Please input your Username!' },
+                  ]}
+                >
                   <Input
-                    prefix={
-                      <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
-                    }
+                    prefix={<UserOutlined className="site-form-item-icon" />}
                     placeholder="Username"
                   />
                 </Form.Item>
-                <Form.Item>
-                  <h4>Password:</h4>
+                <Form.Item
+                  name="password"
+                  rules={[
+                    { required: true, message: 'Please input your Password!' },
+                  ]}
+                >
                   <Input
-                    prefix={
-                      <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />
-                    }
+                    prefix={<LockOutlined className="site-form-item-icon" />}
                     type="password"
                     placeholder="Password"
                   />
                 </Form.Item>
-                <Row>
-                  <Form.Item>
-                    <Checkbox>
-                      <span>Ingat Saya</span>
-                    </Checkbox>
+                <Form.Item>
+                  <Form.Item name="remember" valuePropName="checked" noStyle>
+                    <Checkbox>Remember me</Checkbox>
                   </Form.Item>
-                </Row>
+                </Form.Item>
                 <Row align="center">
                   <Form.Item>
                     <Button
+                      type="primary"
                       htmlType="submit"
                       className="login-form-button"
-                      size="large"
                     >
-                      <strong>Masuk</strong>
+                      Masuk
                     </Button>
                   </Form.Item>
                 </Row>
