@@ -2,6 +2,7 @@ import Login from '../pages/login';
 import Home from '../pages/home';
 /** /informasi layanan */
 import ServiceInformation from '../pages/service-information';
+import ServiceInformationPassport from '../pages/service-information/passport';
 /** /status-permohonan */
 import ApplicationStatus from '../pages/application-status';
 import ApplicationStatusPassport from '../pages/application-status/passport';
@@ -27,6 +28,14 @@ const privateRoutes = [
   {
     path: '/',
     page: Home,
+  },
+  {
+    path: '/informasi-layanan',
+    page: ServiceInformation,
+  },
+  {
+    path: '/informasi-layanan/paspor',
+    page: ServiceInformationPassport,
   },
   {
     path: '/informasi-layanan',
