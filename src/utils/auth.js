@@ -6,10 +6,7 @@ const checkAuth = () => {
 };
 
 const setAuth = (value) => {
-  setLocalStorage('auth', value, {
-    time: 14,
-    type: 'day',
-  });
+  setLocalStorage('auth', value);
 };
 
 const removeAuth = () => {

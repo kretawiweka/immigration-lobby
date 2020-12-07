@@ -1,5 +1,5 @@
-import React from 'react';
-import { Modal, Form, Input, Button } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { Modal, Form, Input, Button, Alert } from 'antd';
 
 const { TextArea } = Input;
 
@@ -9,6 +9,13 @@ const layout = {
 };
 
 const ModalCreate = ({ isVisible, onCancel }) => {
+  const [form] = Form.useForm();
+
+  const [visibleAlert, setVisibleAlert] = useState(false);
+
+  const handleClose = () => {
+    setVisibleAlert(false);
+  };
   return (
     <Modal
       title="Tambah Data"
@@ -16,16 +23,29 @@ const ModalCreate = ({ isVisible, onCancel }) => {
       onCancel={onCancel}
       footer={[]}
     >
+      {visibleAlert ? (
+        <div style={{ marginBottom: '14px' }}>
+          <Alert
+            message="Data sukses ditambahkan"
+            type="success"
+            closable
+            afterClose={handleClose}
+          />
+        </div>
+      ) : null}
       <Form
         {...layout}
         name="basic"
-        initialValues={{ remember: true }}
-        onFinish={() => {}}
+        form={form}
+        onFinish={() => {
+          setVisibleAlert(true);
+          form.resetFields();
+        }}
         onFinishFailed={() => {}}
       >
         <Form.Item
           label="Nama Layanan Indonesia"
-          name="indo_service_name"
+          name="indo_service"
           rules={[
             { required: true, message: 'Masukkan nama layanan indonesia' },
           ]}
@@ -34,21 +54,21 @@ const ModalCreate = ({ isVisible, onCancel }) => {
         </Form.Item>
         <Form.Item
           label="Nama Layanan Inggris"
-          name="eng_service_name"
+          name="eng_service"
           rules={[{ required: true, message: 'Masukkan nama layanan inggris' }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Deskripsi Indonesia"
-          name="indonesian_description"
+          label="Konten Indonesia"
+          name="indo_description"
           rules={[{ required: true, message: 'Masukkan deskripi indonesia' }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item
-          label="Deskripsi Inggris"
-          name="english_description"
+          label="Konten Inggris"
+          name="eng_description"
           rules={[{ required: true, message: 'Masukkan deskripi inggris' }]}
         >
           <TextArea rows={4} />
@@ -63,7 +83,16 @@ const ModalCreate = ({ isVisible, onCancel }) => {
   );
 };
 
-const ModalUpdate = ({ isVisible, onCancel }) => {
+const ModalUpdate = ({ isVisible, onCancel, data }) => {
+  const [form] = Form.useForm();
+  const [visibleAlert, setVisibleAlert] = useState(false);
+  useEffect(() => {
+    form.resetFields();
+    setVisibleAlert(false);
+  }, [data, form]);
+  const handleClose = () => {
+    setVisibleAlert(false);
+  };
   return (
     <Modal
       title="Ubah Data"
@@ -71,16 +100,34 @@ const ModalUpdate = ({ isVisible, onCancel }) => {
       onCancel={onCancel}
       footer={[]}
     >
+      {visibleAlert ? (
+        <div style={{ marginBottom: '14px' }}>
+          <Alert
+            message="Data sukses diubah"
+            type="success"
+            closable
+            afterClose={handleClose}
+          />
+        </div>
+      ) : null}
       <Form
         {...layout}
+        form={form}
+        initialValues={{
+          indo_service: data.indo_service,
+          eng_service: data.eng_service,
+          indo_content: data.indo_content,
+          eng_content: data.eng_content,
+        }}
         name="basic"
-        initialValues={{ remember: true }}
-        onFinish={() => {}}
+        onFinish={() => {
+          setVisibleAlert(true);
+        }}
         onFinishFailed={() => {}}
       >
         <Form.Item
           label="Nama Layanan Indonesia"
-          name="indo_service_name"
+          name="indo_service"
           rules={[
             { required: true, message: 'Masukkan nama layanan indonesia' },
           ]}
@@ -89,22 +136,22 @@ const ModalUpdate = ({ isVisible, onCancel }) => {
         </Form.Item>
         <Form.Item
           label="Nama Layanan Inggris"
-          name="eng_service_name"
+          name="eng_service"
           rules={[{ required: true, message: 'Masukkan nama layanan inggris' }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Deskripsi Indonesia"
-          name="indonesian_description"
-          rules={[{ required: true, message: 'Masukkan deskripi indonesia' }]}
+          label="Konten Indonesia"
+          name="indo_content"
+          rules={[{ required: true, message: 'Masukkan konten indonesia' }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item
-          label="Deskripsi Inggris"
-          name="english_description"
-          rules={[{ required: true, message: 'Masukkan deskripi inggris' }]}
+          label="Konten Inggris"
+          name="eng_content"
+          rules={[{ required: true, message: 'Masukkan konten inggris' }]}
         >
           <TextArea rows={4} />
         </Form.Item>

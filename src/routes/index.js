@@ -2,7 +2,8 @@ import Login from '../pages/login';
 import Home from '../pages/home';
 /** /informasi layanan */
 import ServiceInformation from '../pages/service-information';
-import ServiceInformationPassport from '../pages/service-information/passport';
+import ProductList from '../pages/service-information/product-list';
+import ProductDetail from '../pages/service-information/product-detail';
 /** /status-permohonan */
 import ApplicationStatus from '../pages/application-status';
 import ApplicationStatusPassport from '../pages/application-status/passport';
@@ -23,6 +24,8 @@ import ChatRoom from '../pages/online-chat/chatroom';
 import StartChatRoom from '../pages/online-chat/startchatroom';
 import StartChatRoomAlt from '../pages/online-chat/startchatroomalt';
 import ChatRoomOver from '../pages/online-chat/chatroomover';
+/** /pencarian */
+import Search from '../pages/search';
 
 const privateRoutes = [
   {
@@ -34,8 +37,12 @@ const privateRoutes = [
     page: ServiceInformation,
   },
   {
-    path: '/informasi-layanan/paspor',
-    page: ServiceInformationPassport,
+    path: '/informasi-layanan/:id_service',
+    page: ProductList,
+  },
+  {
+    path: '/informasi-layanan/:id_service/:id_product',
+    page: ProductDetail,
   },
   {
     path: '/informasi-layanan',
@@ -101,6 +108,10 @@ const privateRoutes = [
   {
     path: '/online-chat/room/over',
     page: ChatRoomOver,
+  },
+  {
+    path: '/pencarian',
+    page: Search,
   },
 ];
 

@@ -3,16 +3,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import { ContentUserAccount, BreadCrumbContainer } from './style';
 
-import {
-  Breadcrumb,
-  Typography,
-  Card,
-  Button,
-  Row,
-  Col,
-  Table,
-  Space,
-} from 'antd';
+import { Breadcrumb, Typography, Button, Row, Col, Table, Space } from 'antd';
 
 import { DeleteOutlined } from '@ant-design/icons';
 const { Title } = Typography;
@@ -181,32 +172,32 @@ const UserAccount = () => {
               </Breadcrumb.Item>
             </Breadcrumb>
           </BreadCrumbContainer>
-          <Card>
-            <Row>
-              <Col span={20}>
-                <Title level={4}>Akun Pengguna</Title>
-              </Col>
-              <Col span={4}>
-                <Button
-                  type="success"
-                  htmlType="submit"
-                  className="login-form-button"
-                  size="large"
-                  style={{ float: 'right' }}
-                >
-                  <strong>Tambah</strong>
-                </Button>
-              </Col>
-            </Row>
-            <hr></hr>
-            <br></br>
+          <Row>
+            <Col span={20}>
+              <Title level={4}>Akun Pengguna</Title>
+            </Col>
+            <Col span={4}>
+              <Button
+                type="success"
+                htmlType="submit"
+                className="login-form-button"
+                size="large"
+                style={{ float: 'right' }}
+              >
+                <strong>Tambah</strong>
+              </Button>
+            </Col>
+          </Row>
+          <hr></hr>
+          <br></br>
+          <div style={{ overflowX: 'auto' }}>
             <Table
               columns={columns}
               dataSource={data}
               onChange={onChange}
               bordered
             />
-          </Card>
+          </div>
         </ContentUserAccount>
       </Layout>
     </>

@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components';
 
 const HeaderContainer = styled.div`
-  border-bottom: 3.5px solid #749aa9;
+  -webkit-box-shadow: 0px 2px 11px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 11px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 11px -2px rgba(0, 0, 0, 0.3);
 `;
 
 const HeaderContent = styled.div`
   padding: 17.5px;
-  background-color: #ffffff;
+  background-color: #fff;
   min-height: 70px;
   display: flex;
   align-items: center;
@@ -42,7 +44,7 @@ const SingleHeaderTitle = styled.h1`
 `;
 
 const SingleHeaderLine = styled.div`
-  background-color: #749aa9;
+  background-color: #273c75;
   height: 7px;
 `;
 

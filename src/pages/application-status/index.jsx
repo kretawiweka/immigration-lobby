@@ -1,15 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Breadcrumb } from 'antd';
 
 import Card from '../../components/Card';
 import Layout from '../../components/Layout';
 import { SingleHeader } from '../../components/Header';
-import { Content, CardContent, CardTitle } from './style';
+import { Content, CardContent, CardTitle, BreadCrumbContainer } from './style';
 
 const ApplicationStatus = () => {
   return (
     <>
       <Layout>
+        <BreadCrumbContainer>
+          <Breadcrumb>
+            <Breadcrumb.Item>Beranda</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <strong>Status Permohonan</strong>
+            </Breadcrumb.Item>
+          </Breadcrumb>
+        </BreadCrumbContainer>
         <SingleHeader title="STATUS PERMOHONAN" />
         <Content>
           <CardContent>
