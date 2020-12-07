@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Select } from 'antd';
+import { Select, Breadcrumb } from 'antd';
 
 import Layout from '../../components/Layout';
 import { SingleHeader } from '../../components/Header';
-import { SelectOptionArea, Content } from './style';
+import { SelectOptionArea, Content, BreadCrumbContainer } from './style';
 import Service from './service';
 import ProductInformation from './product-information';
 import Product from './product';
@@ -47,6 +47,14 @@ const ManageServiceInformation = () => {
   return (
     <>
       <Layout>
+        <BreadCrumbContainer>
+          <Breadcrumb>
+            <Breadcrumb.Item>Beranda</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <strong>Kelola Informasi Layanan</strong>
+            </Breadcrumb.Item>
+          </Breadcrumb>
+        </BreadCrumbContainer>
         <SingleHeader title="KELOLA INFORMASI LAYANAN" />
         <Content>
           <SelectOptionArea>

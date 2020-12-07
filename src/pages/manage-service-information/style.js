@@ -25,4 +25,19 @@ const AddBtnArea = styled.div`
   justify-content: flex-end;
   margin: 14px 0px;
 `;
-export { SelectOptionArea, Content, TableArea, AddBtnArea };
+
+const BreadCrumbContainer = styled.div`
+  margin: 14px;
+  span {
+    color: #749aa9 !important;
+    cursor: pointer;
+  }
+`;
+
+export {
+  SelectOptionArea,
+  Content,
+  TableArea,
+  AddBtnArea,
+  BreadCrumbContainer,
+};

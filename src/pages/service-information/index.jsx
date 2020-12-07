@@ -1,17 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Form, Input } from 'antd';
+import { Link, useHistory } from 'react-router-dom';
+import { Button, Form, Input, Breadcrumb } from 'antd';
 
 import Card from '../../components/Card';
 import Layout from '../../components/Layout';
 import { SingleHeader } from '../../components/Header';
-import { Content, CardContent, CardTitle } from './style';
+import { Content, CardContent, CardTitle, BreadCrumbContainer } from './style';
 
 const ServiceInformation = () => {
-  const onSubmit = () => {};
+  let history = useHistory();
+
+  const onSubmit = (value) => {
+    let searchQuery = encodeURIComponent(value.search);
+    history.push({
+      pathname: '/pencarian',
+      search: `?search=${searchQuery}`,
+    });
+  };
   return (
     <>
       <Layout>
+        <BreadCrumbContainer>
+          <Breadcrumb>
+            <Breadcrumb.Item>Beranda</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <strong>Informasi Layanan</strong>
+            </Breadcrumb.Item>
+          </Breadcrumb>
+        </BreadCrumbContainer>
         <SingleHeader title="INFORMASI LAYANAN" />
         <Content>
           <h2>Pencarian Informasi Layanan</h2>
@@ -28,7 +44,9 @@ const ServiceInformation = () => {
               <Input placeholder="Contoh: Syarat Paspor Biasa 24 Halaman" />
             </Form.Item>
             <Form.Item>
-              <Button style={{ marginLeft: '14px' }}>Telusuri</Button>
+              <Button htmlType="submit" style={{ marginLeft: '14px' }}>
+                Telusuri
+              </Button>
             </Form.Item>
           </Form>
           <CardContent>

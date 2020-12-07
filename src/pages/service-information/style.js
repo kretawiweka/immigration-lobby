@@ -18,7 +18,7 @@ const CardTitle = styled.h4`
 `;
 
 const BreadCrumbContainer = styled.div`
-  margin: 14px 0px;
+  margin: 14px;
   span {
     color: #749aa9 !important;
     cursor: pointer;

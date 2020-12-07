@@ -12,7 +12,7 @@ const Hero = () => {
     <>
       <HeroContaier>
         <HeroLayer />
-        <HeroTitle>Hai, Ayu</HeroTitle>
+        <HeroTitle>Hai, Arfan Gumintang</HeroTitle>
         <HeroSub>Pilih layanan keimigrasian yang diinginkan</HeroSub>
         <HeroImage src={HeroBackground} alt="hero-background" />
       </HeroContaier>
