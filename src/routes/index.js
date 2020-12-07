@@ -24,6 +24,8 @@ import ChatRoom from '../pages/online-chat/chatroom';
 import StartChatRoom from '../pages/online-chat/startchatroom';
 import StartChatRoomAlt from '../pages/online-chat/startchatroomalt';
 import ChatRoomOver from '../pages/online-chat/chatroomover';
+/** /pencarian */
+import Search from '../pages/search';
 
 const privateRoutes = [
   {
@@ -106,6 +108,10 @@ const privateRoutes = [
   {
     path: '/online-chat/room/over',
     page: ChatRoomOver,
+  },
+  {
+    path: '/pencarian',
+    page: Search,
   },
 ];
 

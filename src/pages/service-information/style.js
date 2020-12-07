@@ -38,9 +38,6 @@ const DetailProductCardContent = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  a {
-    width: 100%;
-  }
 `;
 
 export {
