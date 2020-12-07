@@ -13,7 +13,7 @@ const ServiceInformation = () => {
         <SingleHeader title="INFORMASI LAYANAN" />
         <Content>
           <CardContent>
-            <Link to="/informasi-layanan/paspor">
+            <Link to="/informasi-layanan/1">
               <Card backgroundColor="#749AA9" width="240px">
                 <CardTitle>Paspor</CardTitle>
               </Card>

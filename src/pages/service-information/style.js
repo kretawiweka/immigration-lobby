@@ -5,7 +5,7 @@ const Content = styled.div`
 `;
 
 const CardContent = styled.div`
-  margin: 14px;
+  margin: 14px 14px 28px 14px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,10 +32,22 @@ const ContentPassport = styled.div`
   padding-bottom: 28px;
 `;
 
+const DetailProductCardContent = styled.div`
+  margin: 14px 14px 28px 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  a {
+    width: 100%;
+  }
+`;
+
 export {
   Content,
   CardContent,
   CardTitle,
   BreadCrumbContainer,
   ContentPassport,
+  DetailProductCardContent,
 };

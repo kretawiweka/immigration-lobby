@@ -2,7 +2,8 @@ import Login from '../pages/login';
 import Home from '../pages/home';
 /** /informasi layanan */
 import ServiceInformation from '../pages/service-information';
-import ServiceInformationPassport from '../pages/service-information/passport';
+import ProductList from '../pages/service-information/product-list';
+import ProductDetail from '../pages/service-information/product-detail';
 /** /status-permohonan */
 import ApplicationStatus from '../pages/application-status';
 import ApplicationStatusPassport from '../pages/application-status/passport';
@@ -34,8 +35,12 @@ const privateRoutes = [
     page: ServiceInformation,
   },
   {
-    path: '/informasi-layanan/paspor',
-    page: ServiceInformationPassport,
+    path: '/informasi-layanan/:id_service',
+    page: ProductList,
+  },
+  {
+    path: '/informasi-layanan/:id_service/:id_product',
+    page: ProductDetail,
   },
   {
     path: '/informasi-layanan',
