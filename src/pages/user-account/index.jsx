@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Layout from '../../components/Layout';
 import { ContentUserAccount, BreadCrumbContainer } from './style';
@@ -177,15 +178,17 @@ const UserAccount = () => {
               <Title level={4}>Akun Pengguna</Title>
             </Col>
             <Col span={4}>
-              <Button
-                type="success"
-                htmlType="submit"
-                className="login-form-button"
-                size="large"
-                style={{ float: 'right' }}
-              >
-                <strong>Tambah</strong>
-              </Button>
+              <Link to="/akun-pengguna/tambah">
+                <Button
+                  type="success"
+                  htmlType="submit"
+                  className="login-form-button"
+                  size="large"
+                  style={{ float: 'right' }}
+                >
+                  <strong>Tambah</strong>
+                </Button>
+              </Link>
             </Col>
           </Row>
           <hr></hr>

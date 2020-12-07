@@ -24,13 +24,18 @@ const ServiceInformation = () => {
           <Breadcrumb>
             <Breadcrumb.Item>Beranda</Breadcrumb.Item>
             <Breadcrumb.Item>
-              <strong>Informasi Layanan</strong>
+              <strong>Jenis Layanan</strong>
             </Breadcrumb.Item>
           </Breadcrumb>
         </BreadCrumbContainer>
-        <SingleHeader title="INFORMASI LAYANAN" />
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <SingleHeader title="JENIS LAYANAN" />
+          <div>
+            <Button style={{ margin: '0 14px' }}>Indonesia</Button>
+            <Button style={{ margin: '0 14px' }}>English</Button>
+          </div>
+        </div>
         <Content>
-          <h2>Pencarian Informasi Layanan</h2>
           <Form
             name="basic"
             onFinish={onSubmit}
@@ -41,11 +46,11 @@ const ServiceInformation = () => {
               rules={[{ required: true, message: 'Masukkan kata kunci' }]}
               style={{ flex: 1 }}
             >
-              <Input placeholder="Contoh: Syarat Paspor Biasa 24 Halaman" />
+              <Input placeholder="Ketik untuk mencari informasi layanan keimigrasian" />
             </Form.Item>
             <Form.Item>
               <Button htmlType="submit" style={{ marginLeft: '14px' }}>
-                Telusuri
+                Cari
               </Button>
             </Form.Item>
           </Form>
@@ -53,6 +58,16 @@ const ServiceInformation = () => {
             <Link to="/informasi-layanan/1">
               <Card backgroundColor="#749AA9" width="240px">
                 <CardTitle>Paspor</CardTitle>
+              </Card>
+            </Link>
+            <Link to="/informasi-layanan/2">
+              <Card backgroundColor="#749AA9" width="240px">
+                <CardTitle>Izin Tinggal</CardTitle>
+              </Card>
+            </Link>
+            <Link to="/informasi-layanan/3">
+              <Card backgroundColor="#749AA9" width="240px">
+                <CardTitle>Visa</CardTitle>
               </Card>
             </Link>
           </CardContent>

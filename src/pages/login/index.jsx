@@ -88,7 +88,7 @@ const Login = () => {
                 </Form.Item>
                 <Form.Item>
                   <Form.Item name="remember" valuePropName="checked" noStyle>
-                    <Checkbox>Remember me</Checkbox>
+                    <Checkbox>Ingat Saya</Checkbox>
                   </Form.Item>
                 </Form.Item>
                 <Row align="center">

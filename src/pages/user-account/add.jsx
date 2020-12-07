@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Layout from '../../components/Layout';
 import { ContentUserAccount, BreadCrumbContainer } from './style';
@@ -14,6 +15,7 @@ import {
   Col,
   Space,
   Select,
+  Alert,
 } from 'antd';
 
 import {
@@ -21,6 +23,7 @@ import {
   EyeTwoTone,
   ArrowLeftOutlined,
 } from '@ant-design/icons';
+
 const { Title } = Typography;
 const { Option } = Select;
 
@@ -41,6 +44,18 @@ function onSearch(val) {
 }
 
 const UserAccountAdd = () => {
+  const [visibleAlert, setVisibleAlert] = useState(false);
+  const [form] = Form.useForm();
+
+  const handleClose = () => {
+    setVisibleAlert(false);
+  };
+
+  useEffect(() => {
+    form.resetFields();
+    setVisibleAlert(false);
+  }, [form]);
+
   return (
     <>
       <Layout>
@@ -62,19 +77,43 @@ const UserAccountAdd = () => {
             </Row>
             <hr></hr>
             <br></br>
-            <Form className="login-form" layout="horizontal">
+            <Form
+              form={form}
+              className="login-form"
+              layout="horizontal"
+              onFinish={() => {
+                setVisibleAlert(true);
+              }}
+            >
               <Row>
                 <Col span={5}>
-                  <Button
-                    type="primary"
-                    htmlType="submit"
-                    className="login-form-button"
-                    style={{ background: '#64aced' }}
-                    icon={<ArrowLeftOutlined />}
-                  >
-                    <strong> Kembali</strong>
-                  </Button>
+                  <Link to="/akun-pengguna">
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      className="login-form-button"
+                      style={{ background: '#64aced' }}
+                      icon={<ArrowLeftOutlined />}
+                    >
+                      <strong> Kembali</strong>
+                    </Button>
+                  </Link>
                 </Col>
+                <Col span={14}>
+                  {visibleAlert ? (
+                    <div style={{ marginBottom: '14px' }}>
+                      <Alert
+                        message="Data sukses ditambahkan"
+                        type="success"
+                        closable
+                        afterClose={handleClose}
+                      />
+                    </div>
+                  ) : null}
+                </Col>
+              </Row>
+              <Row>
+                <Col span={5}></Col>
                 <Col span={4}>
                   NIP<strong style={{ color: 'red' }}>*</strong>
                 </Col>

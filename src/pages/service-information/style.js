@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Content = styled.div`
   margin: 42px;
@@ -7,7 +7,14 @@ const Content = styled.div`
 const CardContent = styled.div`
   margin: 14px 14px 28px 14px;
   display: flex;
-  flex-direction: row;
+  ${(props) =>
+    props.flexDirection === 'column'
+      ? css`
+          flex-direction: column;
+        `
+      : css`
+          flex-direction: row;
+        `}
   justify-content: space-between;
 `;
 
