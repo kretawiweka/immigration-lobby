@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Input, Button, Alert } from 'antd';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const { TextArea } = Input;
 
@@ -173,6 +175,7 @@ const ModalDelete = ({ isVisible, onCancel }) => {
       onCancel={onCancel}
       footer={[]}
     >
+      <ToastContainer />
       <h4>Apakah Anda yakin menghapus layanan ini ?</h4>
       <div
         style={{
@@ -181,7 +184,24 @@ const ModalDelete = ({ isVisible, onCancel }) => {
           marginTop: '35px',
         }}
       >
-        <Button onClick={onCancel} style={{ width: '100px' }} type="primary">
+        <Button
+          onClick={() => {
+            toast.error('Data berhasil dihapus', {
+              position: 'top-right',
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+            setTimeout(function () {
+              onCancel();
+            }, 3000);
+          }}
+          style={{ width: '100px' }}
+          type="primary"
+        >
           Ya
         </Button>
         <Button onClick={onCancel} style={{ width: '100px' }}>
