@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, Form, Input, Button, Alert, Row, Col } from 'antd';
+import { Modal, Form, Input, Button, Alert } from 'antd';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -80,7 +80,12 @@ const ModalCreate = ({ isVisible, onCancel }) => {
           <Button style={{ float: 'right' }} type="secondary" size="large">
             Batal
           </Button>
-          <Button style={{ float: 'right', marginRight: '10px' }} type="primary" htmlType="submit" size="large">
+          <Button
+            style={{ float: 'right', marginRight: '10px' }}
+            type="primary"
+            htmlType="submit"
+            size="large"
+          >
             Simpan
           </Button>
         </Form.Item>
@@ -165,7 +170,12 @@ const ModalUpdate = ({ isVisible, onCancel, data }) => {
           <Button style={{ float: 'right' }} type="secondary" size="large">
             Batal
           </Button>
-          <Button style={{ float: 'right', marginRight: '10px' }} type="primary" htmlType="submit" size="large">
+          <Button
+            style={{ float: 'right', marginRight: '10px' }}
+            type="primary"
+            htmlType="submit"
+            size="large"
+          >
             Simpan
           </Button>
         </Form.Item>

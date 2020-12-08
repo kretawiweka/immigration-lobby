@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { Button } from 'antd';
-import { removeAuth } from '../../utils/auth';
 import ImmigrationLogo from '../../assets/images/immigration_logo.png';
 
 import {
   HeaderContainer,
   HeaderContent,
-  HeaderAction,
   SingleHeaderContainer,
   SingleHeaderTitle,
   SingleHeaderLine,
@@ -18,10 +15,6 @@ import {
 // import newStyle from './newStyle.scss';
 
 const Header = () => {
-  const onLogout = () => {
-    removeAuth();
-    window.location.href = '/login';
-  };
   return (
     <HeaderContainer>
       <HeaderContent>

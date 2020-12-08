@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Typography, Card, Row, Col, Image, Button } from 'antd';
 
 import { ContentChatRoom } from './style';
-import ImmigrationLogo from '../../assets/images/immigration_logo.png';
-import { Link } from 'react-router-dom';
 
 const { Title } = Typography;
 
@@ -30,8 +28,8 @@ class StartChatRoomAlt extends Component {
                 <Title level={2}>Kantor Imigrasi Kelas I Jakarta Selatan</Title>
                 <Title level={3}>sudah tutup.</Title>
                 <Title level={3}>
-                  Silahkan coba hubungi Petugas Duta Layanan kami di jam buka kantor. 
-                  Terima kasih.
+                  Silahkan coba hubungi Petugas Duta Layanan kami di jam buka
+                  kantor. Terima kasih.
                 </Title>
                 <br></br>
                 <br></br>
