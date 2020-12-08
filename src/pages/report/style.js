@@ -8,19 +8,19 @@ const CardContent = styled.div`
   margin: 14px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 `;
 
 const CardTitle = styled.h4`
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
-  color: #fafafa;
+  color: #595959;
+  font-weight: bolder;
 `;
 
 const SubFeatureContent = styled.div`
   diplay: flex;
   flex-direction: column;
-  margin: 14px 28px 105px 28px;
+  margin: 14px 28px 55px 28px;
 `;
 
 const BreadCrumbContainer = styled.div`

@@ -87,17 +87,6 @@ const UserAccountAdd = () => {
             >
               <Row>
                 <Col span={5}>
-                  <Link to="/akun-pengguna">
-                    <Button
-                      type="primary"
-                      htmlType="submit"
-                      className="login-form-button"
-                      style={{ background: '#64aced' }}
-                      icon={<ArrowLeftOutlined />}
-                    >
-                      <strong> Kembali</strong>
-                    </Button>
-                  </Link>
                 </Col>
                 <Col span={14}>
                   {visibleAlert ? (
@@ -119,7 +108,7 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={10}>
                   <Form.Item>
-                    <Input placeholder="Masukkan NIP" />
+                    <Input placeholder="NIP" />
                   </Form.Item>
                 </Col>
               </Row>
@@ -130,7 +119,7 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={10}>
                   <Form.Item>
-                    <Input placeholder="Masukkan Nama" />
+                    <Input placeholder="Nama" />
                   </Form.Item>
                 </Col>
               </Row>
@@ -141,7 +130,7 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={10}>
                   <Form.Item>
-                    <Input placeholder="Masukkan Username" />
+                    <Input placeholder="Username" />
                   </Form.Item>
                 </Col>
               </Row>
@@ -154,7 +143,7 @@ const UserAccountAdd = () => {
                   <Form.Item>
                     <Space direction="vertical" style={{ width: '100%' }}>
                       <Input.Password
-                        placeholder="Masukkan Password"
+                        placeholder="Password"
                         iconRender={(visible) =>
                           visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                         }
@@ -172,7 +161,7 @@ const UserAccountAdd = () => {
                   <Form.Item>
                     <Space direction="vertical" style={{ width: '100%' }}>
                       <Input.Password
-                        placeholder="Masukkan Kembali Password"
+                        placeholder="Ulangi Password"
                         iconRender={(visible) =>
                           visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                         }
@@ -188,7 +177,11 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={10}>
                   <Form.Item>
-                    <Input placeholder="Masukkan Username" />
+                    <Select defaultValue="Pilih Hak Akses" style={{ width: '100%' }}>
+                      <Option value="Administrator Humas">Administrator Humas</Option>
+                      <Option value="Administrator Kanim">Administrator Kanim</Option>
+                      <Option value="Petugas Duta Layanan">Petugas Duta Layanan</Option>
+                    </Select>
                   </Form.Item>
                 </Col>
               </Row>
@@ -202,7 +195,7 @@ const UserAccountAdd = () => {
                     <Select
                       showSearch
                       style={{ width: '100%' }}
-                      placeholder="Select a person"
+                      placeholder="Pilih kantor imigrasi"
                       optionFilterProp="children"
                       onChange={onChangeSelect}
                       onFocus={onFocus}
@@ -538,7 +531,7 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={10}>
                   <Form.Item>
-                    <Input placeholder="Masukkan Jabatan" />
+                    <Input placeholder="Jabatan" />
                   </Form.Item>
                 </Col>
               </Row>
@@ -549,7 +542,7 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={3}>
                   <Form.Item>
-                    <Select defaultValue="iii" style={{ width: '100%' }}>
+                    <Select defaultValue="Pilih Pangkat" style={{ width: '100%' }}>
                       <Option value="i">I</Option>
                       <Option value="ii">II</Option>
                       <Option value="iii">III</Option>
@@ -563,7 +556,7 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={3}>
                   <Form.Item>
-                    <Select defaultValue="a" style={{ width: '100%' }}>
+                    <Select defaultValue="Pilih Golongan" style={{ width: '100%' }}>
                       <Option value="a">A</Option>
                       <Option value="b">B</Option>
                       <Option value="c">C</Option>
@@ -576,7 +569,6 @@ const UserAccountAdd = () => {
               <Row>
                 <Col span={5}></Col>
                 <Col span={6}>
-                  <small style={{ color: 'red' }}>*) Wajib Diisi</small>
                 </Col>
                 <Col span={6}>
                   <Button
@@ -584,10 +576,20 @@ const UserAccountAdd = () => {
                     htmlType="submit"
                     className="login-form-button"
                     size="large"
-                    style={{ background: '#64aced' }}
+                    style={{ background: '#64aced', marginRight: '20px' }}
                   >
                     <strong>Simpan</strong>
                   </Button>
+                  <Link to="/akun-pengguna">
+                    <Button
+                      type="secondary"
+                      htmlType="submit"
+                      className="login-form-button"
+                      size="large"
+                    >
+                      <strong>Batal</strong>
+                    </Button>
+                  </Link>
                 </Col>
               </Row>
             </Form>

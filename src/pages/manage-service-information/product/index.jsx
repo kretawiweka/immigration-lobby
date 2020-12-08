@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Table, Space, Button } from 'antd';
+import { Table, Space, Button, Typography, Row, Col } from 'antd';
 import { ModalCreate, ModalUpdate, ModalDelete } from './ModalData';
 import { TableArea, AddBtnArea } from '../style';
 
 const { Column } = Table;
+const { Title } = Typography;
 
 const Product = () => {
   const [isVisibleModalCreate, setIsVisibleModalCreate] = useState(false);
@@ -28,24 +29,27 @@ const Product = () => {
   const dataTable = [
     {
       key: '1',
-      indo_service: 'Layanan Indonesia',
-      eng_service: 'Layanan Inggris',
-      indo_description: 32,
-      eng_description: 'New York No. 1 Lake Park',
+      no: '1.',
+      indo_service: 'Paspor Biasa 48 Halaman',
+      eng_service: '48 Pages Regular Passport',
+      indo_description: 'Paspor Biasa (tanpa elektronik chip) dengan jumlah halaman sebanyak 48 (empat puluh depalan)',
+      eng_description: 'Regular passport (without electronic chips) with a total of 48 pages',
     },
     {
       key: '2',
-      indo_service: 'Layanan Indonesia',
-      eng_service: 'Layanan Inggris',
-      indo_description: 32,
-      eng_description: 'New York No. 1 Lake Park',
+      no: '2.',
+      indo_service: 'Paspor Biasa 24 Halaman',
+      eng_service: '24 Pages Regular Passport',
+      indo_description: 'Paspor Biasa (tanpa elektronik chip) dengan jumlah halaman sebanyak 24 (dua puluh empat)',
+      eng_description: 'Regular Passport (without electronic chips) with a total of 24 pages',
     },
     {
       key: '3',
-      indo_service: 'Layanan Indonesia',
-      eng_service: 'Layanan Inggris',
-      indo_description: 32,
-      eng_description: 'New York No. 1 Lake Park',
+      no: '3.',
+      indo_service: 'Paspor Elektronik 48 Halaman',
+      eng_service: '48 Pages Electronic Passport',
+      indo_description: 'Paspor Elektronik yang memiliki chip untuk memasukkan data identitas dan biometrik dengan jumlah halaman sebanyak 48 (empat puluh delapan)',
+      eng_description: 'Electronic Passport which has a chip for entering identity and biometric data with a total of 48 pages',
     },
   ];
   return (
@@ -65,33 +69,49 @@ const Product = () => {
         data={deleteData}
       />
       <TableArea>
-        <AddBtnArea>
-          <Button onClick={onChangeModalCreate}>Tambah Jenis Produk</Button>
-        </AddBtnArea>
-        <Table dataSource={dataTable}>
+        <Row>
+          <Col span={12}>
+            <Title level={3} style={{ marginBottom: 0 }}>
+              <strong>
+                Daftar Jenis Produk
+              </strong>
+            </Title>    
+          </Col>
+          <Col span={12}>
+            <AddBtnArea>
+              <Button onClick={onChangeModalCreate} size="large" type="primary" style={{ background: '#64aced', float: 'right' }}>Tambah Jenis Produk</Button>
+            </AddBtnArea>
+          </Col>
+        </Row>
+        <Table dataSource={dataTable} bordered>
           <Column
-            title="Nama Layanan Indonesia"
+            title="No"
+            dataIndex="no"
+            key="no"
+          />
+          <Column
+            title="Nama Jenis Produk (Indonesia)"
             dataIndex="indo_service"
             key="indo_service"
           />
           <Column
-            title="Nama Layanan Inggris"
+            title="Nama Jenis Produk (English)"
             dataIndex="eng_service"
             key="eng_service"
           />
           <Column
-            title="Deskripsi Indonesia"
+            title="Deskripsi Jenis Produk (Indonesia)"
             dataIndex="indo_description"
             key="indo_description"
           />
           <Column
-            title="Deskripsi Inggris"
+            title="Deskripsi Produk (English)"
             dataIndex="eng_description"
             key="eng_description"
           />
           <Column
-            title="Action"
-            key="action"
+            title="Aksi"
+            key="aksi"
             render={(text, record) => (
               <Space size="middle">
                 <Button
@@ -99,6 +119,7 @@ const Product = () => {
                     onChangelModalUpdate(record);
                   }}
                   type="link"
+                  size="large"
                 >
                   Ubah
                 </Button>
@@ -107,6 +128,7 @@ const Product = () => {
                     onChangeModalDelete(record);
                   }}
                   type="link"
+                  size="large"
                 >
                   Hapus
                 </Button>

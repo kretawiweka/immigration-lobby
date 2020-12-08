@@ -67,20 +67,6 @@ const Header = () => {
             </div>
           </Link>
         </div>
-        <HeaderAction>
-          <h3
-            style={{
-              color: '##2f3640',
-              marginBottom: 0,
-              marginTop: 0,
-              fontSize: 14,
-              marginRight: 10,
-            }}
-          >
-            <strong>Arfan Gumintang</strong> (Administrator Humas)
-          </h3>
-          <Button onClick={onLogout}>Keluar</Button>
-        </HeaderAction>
       </HeaderContent>
     </HeaderContainer>
   );

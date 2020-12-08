@@ -17,7 +17,8 @@ const CardContent = styled.div`
 const CardTitle = styled.h4`
   font-size: 18px;
   text-align: center;
-  color: #fafafa;
+  color: #595959;
+  font-weight: bolder;
 `;
 
 const ContentPassport = styled.div`

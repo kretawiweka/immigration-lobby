@@ -14,8 +14,6 @@ import {
 
 import Layout from '../../components/Layout';
 import { ContentChatRoomList, BreadCrumbContainer } from './style';
-import Messages from '../../Messages';
-import ChatInput from '../../ChatInput';
 import '../../Chat.css';
 import { Link } from 'react-router-dom';
 
@@ -184,29 +182,27 @@ class RoomList extends Component {
                         </Badge.Ribbon>
                       </Col>
                     </Row>
-                    <Link to="/online-chat/layani-room">
-                      <Row>
-                        <Col span={23}>
-                          <Badge.Ribbon text="Waiting">
-                            <Card size="small">
-                              <Row>
-                                <Col span={24}>
-                                  <strong>Briselle Manupati</strong>
-                                </Col>
-                              </Row>
-                              <Row>
-                                <Col span={16}>
-                                  <small>bribriselle@icloud.com</small>
-                                </Col>
-                                <Col span={8}>
-                                  <small>17 November 2020 11:49:31</small>
-                                </Col>
-                              </Row>
-                            </Card>
-                          </Badge.Ribbon>
-                        </Col>
-                      </Row>
-                    </Link>
+                    <Row>
+                      <Col span={23}>
+                        <Badge.Ribbon text="Waiting">
+                          <Card size="small">
+                            <Row>
+                              <Col span={24}>
+                                <strong>Briselle Manupati</strong>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col span={16}>
+                                <small>bribriselle@icloud.com</small>
+                              </Col>
+                              <Col span={8}>
+                                <small>17 November 2020 11:49:31</small>
+                              </Col>
+                            </Row>
+                          </Card>
+                        </Badge.Ribbon>
+                      </Col>
+                    </Row>
                     <Row>
                       <Col span={23}>
                         <Badge.Ribbon text="Waiting">
@@ -373,22 +369,10 @@ class RoomList extends Component {
                       </center>
                     </Col>
                     <Col span={18}>
-                      <strong>Supriyadi Munawar Akbar</strong>
-                      <br></br>supriyadimunawarakbar@gmail.com
+                      <strong>Briselle Manupati</strong>
+                      <br></br>bribriselle@icloud.com
                     </Col>
                     <Col span={4}>
-                      <Button
-                        type="primary"
-                        htmlType="submit"
-                        style={{
-                          backgroundColor: 'red',
-                          color: 'white',
-                          border: '0',
-                          float: 'right',
-                        }}
-                      >
-                        <strong>Akhiri</strong>
-                      </Button>
                     </Col>
                   </Row>
                 </Card>
@@ -400,13 +384,39 @@ class RoomList extends Component {
                   }}
                   bodyStyle={{ padding: 0 }}
                 >
-                  <Messages
-                    messages={this.state.messages}
-                    currentMember={this.state.member}
-                  />
-                </Card>
-                <Card bodyStyle={{ padding: 10 }}>
-                  <ChatInput onSendMessage={this.onSendMessage} />
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <center>
+                        <Title level={3} style={{ marginBottom: -20 }}>
+                            <strong>
+                            Briselle Manupati
+                            </strong>
+                        </Title>
+                        <Title level={4} style={{ marginBottom: 0 }}>
+                            <strong>
+                                <small>ingin bertanya langsung dengan Anda</small><br></br>
+                                <small>(sudah menunggu selama 2 menit)</small>
+                            </strong>
+                        </Title>
+                        <br></br>
+                        <br></br>
+                        <Link to="/online-chat/room-list2">
+                            <Button
+                                type="primary"
+                                htmlType="submit"
+                                className="login-form-button"
+                                style={{ background: '#64aced' }}
+                                size="large"
+                            >
+                                <strong>Layani Sekarang</strong>
+                            </Button>
+                        </Link>
+                    </center>
                 </Card>
               </Card>
             </Col>

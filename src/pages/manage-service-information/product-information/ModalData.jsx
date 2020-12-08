@@ -21,7 +21,7 @@ const ModalCreate = ({ isVisible, onCancel }) => {
 
   return (
     <Modal
-      title="Tambah Data"
+      title="Tambah Informasi Produk"
       visible={isVisible}
       onCancel={onCancel}
       footer={[]}
@@ -47,7 +47,7 @@ const ModalCreate = ({ isVisible, onCancel }) => {
         onFinishFailed={() => {}}
       >
         <Form.Item
-          label="Nama Layanan Indonesia"
+          label="Judul Informasi (Indo)"
           name="indo_service"
           rules={[
             { required: true, message: 'Masukkan nama layanan indonesia' },
@@ -56,28 +56,31 @@ const ModalCreate = ({ isVisible, onCancel }) => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Nama Layanan Inggris"
+          label="Judul Informasi (Eng)"
           name="eng_service"
           rules={[{ required: true, message: 'Masukkan nama layanan inggris' }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Konten Indonesia"
+          label="Konten Indonesia (Indo)"
           name="indo_description"
           rules={[{ required: true, message: 'Masukkan deskripi indonesia' }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item
-          label="Konten Inggris"
+          label="Konten Inggris (Eng)"
           name="eng_description"
           rules={[{ required: true, message: 'Masukkan deskripi inggris' }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item>
-          <Button style={{ float: 'right' }} type="primary" htmlType="submit">
+          <Button style={{ float: 'right' }} type="secondary" size="large">
+            Batal
+          </Button>
+          <Button style={{ float: 'right', marginRight: '10px' }} type="primary" htmlType="submit" size="large">
             Simpan
           </Button>
         </Form.Item>
@@ -98,7 +101,7 @@ const ModalUpdate = ({ isVisible, onCancel, data }) => {
   };
   return (
     <Modal
-      title="Ubah Data"
+      title="Ubah Informasi Produk"
       visible={isVisible}
       onCancel={onCancel}
       footer={[]}
@@ -129,7 +132,7 @@ const ModalUpdate = ({ isVisible, onCancel, data }) => {
         onFinishFailed={() => {}}
       >
         <Form.Item
-          label="Nama Layanan Indonesia"
+          label="Judul Informasi (Indo)"
           name="indo_service"
           rules={[
             { required: true, message: 'Masukkan nama layanan indonesia' },
@@ -138,28 +141,31 @@ const ModalUpdate = ({ isVisible, onCancel, data }) => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Nama Layanan Inggris"
+          label="Judul Informasi (Eng)"
           name="eng_service"
           rules={[{ required: true, message: 'Masukkan nama layanan inggris' }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Konten Indonesia"
+          label="Konten Informasi (Indo)"
           name="indo_content"
           rules={[{ required: true, message: 'Masukkan konten indonesia' }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item
-          label="Konten Inggris"
+          label="Konten Informasi (Eng)"
           name="eng_content"
           rules={[{ required: true, message: 'Masukkan konten inggris' }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item>
-          <Button style={{ float: 'right' }} type="primary" htmlType="submit">
+          <Button style={{ float: 'right' }} type="secondary" size="large">
+            Batal
+          </Button>
+          <Button style={{ float: 'right', marginRight: '10px' }} type="primary" htmlType="submit" size="large">
             Simpan
           </Button>
         </Form.Item>
@@ -171,13 +177,13 @@ const ModalUpdate = ({ isVisible, onCancel, data }) => {
 const ModalDelete = ({ isVisible, onCancel }) => {
   return (
     <Modal
-      title="Hapus Data"
+      title="Hapus Informasi Produk"
       visible={isVisible}
       onCancel={onCancel}
       footer={[]}
     >
       <ToastContainer />
-      <h4>Apakah Anda yakin menghapus layanan ini ?</h4>
+      <h4>Apakah Anda yakin akan menghapus informasi produk ini?</h4>
       <div
         style={{
           display: 'flex',

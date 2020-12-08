@@ -187,7 +187,8 @@ class RoomList extends Component {
                     <Link to="/online-chat/layani-room">
                       <Row>
                         <Col span={23}>
-                          <Badge.Ribbon text="Waiting">
+                          <Badge.Ribbon 
+                          style={{ backgroundColor: 'green' }} text="Connected">
                             <Card size="small">
                               <Row>
                                 <Col span={24}>
@@ -373,8 +374,8 @@ class RoomList extends Component {
                       </center>
                     </Col>
                     <Col span={18}>
-                      <strong>Supriyadi Munawar Akbar</strong>
-                      <br></br>supriyadimunawarakbar@gmail.com
+                      <strong>Briselle Manupati</strong>
+                      <br></br>bribriselle@icloud.com
                     </Col>
                     <Col span={4}>
                       <Button

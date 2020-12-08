@@ -15,7 +15,6 @@ const CardContent = styled.div`
       : css`
           flex-direction: row;
         `}
-  justify-content: space-between;
 `;
 
 const CardTitle = styled.h4`

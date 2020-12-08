@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button, Form, Input, Card } from 'antd';
+import { Button, Form, Input, Card, Breadcrumb } from 'antd';
 import queryString from 'query-string';
 
 import Layout from '../../components/Layout';
 import { SingleHeader } from '../../components/Header';
 import { Content, CardContent } from './style';
+import { BreadCrumbContainer } from './style';
 
 const Search = () => {
   const [form] = Form.useForm();
@@ -31,6 +32,15 @@ const Search = () => {
   return (
     <>
       <Layout>
+        <BreadCrumbContainer>
+          <Breadcrumb>
+            <Breadcrumb.Item>Beranda</Breadcrumb.Item>
+            <Breadcrumb.Item>Informasi Layanan</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <strong>Pencarian</strong>
+            </Breadcrumb.Item>
+          </Breadcrumb>
+        </BreadCrumbContainer>
         <SingleHeader title="Pencarian Informasi Layanan" />
         <Content>
           <Form
@@ -44,11 +54,11 @@ const Search = () => {
               rules={[{ required: true, message: 'Masukkan kata kunci' }]}
               style={{ flex: 1 }}
             >
-              <Input placeholder="Contoh: Syarat Paspor Biasa 24 Halaman" />
+              <Input placeholder="Ketik untuk mencari informasi layanan keimigrasian" />
             </Form.Item>
             <Form.Item>
               <Button htmlType="submit" style={{ marginLeft: '14px' }}>
-                Telusuri
+                Cari
               </Button>
             </Form.Item>
           </Form>
