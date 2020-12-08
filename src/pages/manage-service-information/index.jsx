@@ -58,11 +58,12 @@ const ManageServiceInformation = () => {
         <SingleHeader title="KELOLA INFORMASI LAYANAN" />
         <Content>
           <SelectOptionArea>
-            <h4>Jenis Layanan</h4>
+            <h3><strong>Jenis Layanan</strong></h3>
             <Select
-              defaultValue="Pilih Jenis Layanan"
-              style={{ width: '200px' }}
+              defaultValue="Semua"
+              style={{ width: '250px' }}
               onChange={serviceHandleChange}
+              size="large"
             >
               <Option value="">Semua</Option>
               <Option value="Paspor">Paspor</Option>
@@ -70,11 +71,12 @@ const ManageServiceInformation = () => {
           </SelectOptionArea>
           {conditionState !== 'service' && (
             <SelectOptionArea>
-              <h4>Jenis Produk</h4>
+              <h3><strong>Jenis Produk</strong></h3>
               <Select
-                defaultValue="Pilih Jenis Produk"
-                style={{ width: '200px' }}
+                defaultValue="Semua"
+                style={{ width: '250px' }}
                 onChange={productHandleChange}
+                size="large"
               >
                 <Option value="">Semua</Option>
                 <Option value="Paspor Biasa 24 Halaman">

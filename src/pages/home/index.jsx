@@ -6,45 +6,175 @@ import Hero from '../../components/Hero';
 import Layout from '../../components/Layout';
 import { SingleHeader } from '../../components/Header';
 import { Content, CardContent, CardTitle } from './style';
+import InformasiLayananKeimigrasianLogo from '../../assets/images/informasi_layanan_keimigrasian.png';
+import StatusPermohonanLogo from '../../assets/images/status_permohonan.png';
+import OnlineChatLogo from '../../assets/images/online_chat.png';
+import LaporanLogo from '../../assets/images/laporan.png';
+import KelolaInformasiLogo from '../../assets/images/kelola_informasi.png';
+import AkunPenggunaLogo from '../../assets/images/akun_pengguna.png';
+import {
+  Row,
+  Col
+} from 'antd';
 
 const HomePage = () => {
   return (
     <Layout>
       <Hero />
-      <SingleHeader title="LAYANAN KEIMIGRASIAN" />
+      <center>
+        <SingleHeader title="BERANDA" />
+      </center>
       <Content>
         <CardContent>
           <Link to="/informasi-layanan">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Informasi Layanan</CardTitle>
+            <Card backgroundColor="#e8e8e8" width="200px" style={{ height: '240px'}}>
+            <Row>
+              <Col span={24}>
+              <Row>
+                <Col span={24}>
+                  <center>
+                    <img
+                      style={{ width: '110px', height: '100%'}}
+                      src={InformasiLayananKeimigrasianLogo}
+                      alt="Informasi-Layanan-Keimigrasian-logo"
+                    />
+                  </center>
+                </Col>
+              </Row>
+              <br></br>
+              <Row>
+                <Col span={24}>
+                  <CardTitle>Informasi Layanan<br></br>Keimigrasian</CardTitle>
+                </Col>
+              </Row>
+              </Col>
+              </Row>
             </Card>
           </Link>
           <Link to="/status-permohonan">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Status Permohonan</CardTitle>
+            <Card backgroundColor="#e8e8e8" width="200px" style={{ height: '240px'}}>
+            <Row>
+              <Col span={24}>
+              <Row>
+                <Col span={24}>
+                  <center>
+                    <img
+                      style={{ width: '110px', height: '100%'}}
+                      src={StatusPermohonanLogo}
+                      alt="Status-Permohonan-logo"
+                    />
+                  </center>
+                </Col>
+              </Row>
+              <br></br>
+              <Row>
+                <Col span={24}>
+                  <CardTitle>Status<br></br>permohonan</CardTitle>
+                </Col>
+              </Row>
+              </Col>
+              </Row>
+            </Card>
+          </Link>
+          <Link to="/online-chat/room-list">
+          <Card backgroundColor="#e8e8e8" width="200px" style={{ height: '240px'}}>
+            <Row>
+              <Col span={24}>
+              <Row>
+                <Col span={24}>
+                  <center>
+                    <img
+                      style={{ width: '110px', height: '100%'}}
+                      src={OnlineChatLogo}
+                      alt="Online-Chat-logo"
+                    />
+                  </center>
+                </Col>
+              </Row>
+              <br></br>
+              <Row>
+                <Col span={24}>
+                  <CardTitle>Online<br></br>Chat</CardTitle>
+                </Col>
+              </Row>
+              </Col>
+              </Row>
             </Card>
           </Link>
           <Link to="/laporan">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Laporan</CardTitle>
-            </Card>
-          </Link>
-        </CardContent>
-        <CardContent>
-          <Link to="/akun-pengguna">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Akun Pengguna</CardTitle>
-            </Card>
+            <Card backgroundColor="#e8e8e8" width="200px" style={{ height: '240px'}}>
+              <Row>
+                <Col span={24}>
+                <Row>
+                  <Col span={24}>
+                    <center>
+                      <img
+                        style={{ width: '110px', height: '100%'}}
+                        src={LaporanLogo}
+                        alt="Laporan-logo"
+                      />
+                    </center>
+                  </Col>
+                </Row>
+                <br></br>
+                <Row>
+                  <Col span={24}>
+                    <CardTitle>Laporan<br></br><br></br></CardTitle>
+                  </Col>
+                </Row>
+                </Col>
+                </Row>
+              </Card>
           </Link>
           <Link to="/kelola-informasi-layanan">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Kelola Informasi Layanan</CardTitle>
-            </Card>
+            <Card backgroundColor="#e8e8e8" width="200px" style={{ height: '240px'}}>
+                <Row>
+                  <Col span={24}>
+                  <Row>
+                    <Col span={24}>
+                      <center>
+                        <img
+                          style={{ width: '110px', height: '100%'}}
+                          src={KelolaInformasiLogo}
+                          alt="Kelola-Informasi-logo"
+                        />
+                      </center>
+                    </Col>
+                  </Row>
+                  <br></br>
+                  <Row>
+                    <Col span={24}>
+                      <CardTitle>Kelola<br></br>Informasi</CardTitle>
+                    </Col>
+                  </Row>
+                  </Col>
+                  </Row>
+                </Card>
           </Link>
-          <Link to="/online-chat/start-room">
-            <Card backgroundColor="#749AA9" width="240px">
-              <CardTitle>Online Chat</CardTitle>
-            </Card>
+          <Link to="/akun-pengguna">
+            <Card backgroundColor="#e8e8e8" width="200px" style={{ height: '240px'}}>
+              <Row>
+                <Col span={24}>
+                <Row>
+                  <Col span={24}>
+                    <center>
+                      <img
+                        style={{ width: '110px', height: '100%'}}
+                        src={AkunPenggunaLogo}
+                        alt="Akun-Pengguna-logo"
+                      />
+                    </center>
+                  </Col>
+                </Row>
+                <br></br>
+                <Row>
+                  <Col span={24}>
+                    <CardTitle>Akun<br></br>Pengguna</CardTitle>
+                  </Col>
+                </Row>
+                </Col>
+                </Row>
+              </Card>
           </Link>
         </CardContent>
       </Content>

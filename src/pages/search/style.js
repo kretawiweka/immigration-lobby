@@ -15,4 +15,12 @@ const CardContent = styled.div`
   }
 `;
 
-export { Content, CardContent };
+const BreadCrumbContainer = styled.div`
+  margin: 14px 30px;
+  span {
+    color: #749aa9 !important;
+    cursor: pointer;
+  }
+`;
+
+export { Content, CardContent, BreadCrumbContainer };

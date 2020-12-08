@@ -55,17 +55,17 @@ const ServiceInformation = () => {
             </Form.Item>
           </Form>
           <CardContent>
-            <Link to="/informasi-layanan/1">
+            <Link to="/informasi-layanan/1" style={{ marginLeft: '400px' }}>
               <Card backgroundColor="#749AA9" width="240px">
                 <CardTitle>Paspor</CardTitle>
               </Card>
             </Link>
-            <Link to="/informasi-layanan/2">
+            <Link to="/informasi-layanan/2" style={{ marginLeft: '50px' }}>
               <Card backgroundColor="#749AA9" width="240px">
                 <CardTitle>Izin Tinggal</CardTitle>
               </Card>
             </Link>
-            <Link to="/informasi-layanan/3">
+            <Link to="/informasi-layanan/3" style={{ marginLeft: '50px' }}>
               <Card backgroundColor="#749AA9" width="240px">
                 <CardTitle>Visa</CardTitle>
               </Card>

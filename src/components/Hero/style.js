@@ -18,12 +18,12 @@ const HeroLayer = styled.div`
   position: absolute;
 `;
 
-const HeroTitle = styled.h2`
+const HeroTitle = styled.h3`
   position: absolute;
   color: #fafafa;
-  margin-left: 14px;
+  margin-left: 50px;
   bottom: 28px;
-  font-size: 28px;
+  font-size: 24px;
 `;
 
 const HeroSub = styled.h2`

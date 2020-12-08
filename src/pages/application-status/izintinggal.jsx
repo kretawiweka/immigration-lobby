@@ -49,7 +49,11 @@ const ApplicationStatusIzinTinggal = () => {
               <Row>
                 <Col span={4}>Nomor Permohonan</Col>
                 <Col span={20}>
-                  <Form.Item>
+                  <Form.Item
+                    name="nomor_permohonan"
+                    rules={[{ required: true, message: 'Masukkan nomor permohonan' }]}
+                    style={{ flex: 1 }}
+                  >
                     <Input placeholder="Nomor Permohonan" />
                   </Form.Item>
                 </Col>
@@ -57,7 +61,11 @@ const ApplicationStatusIzinTinggal = () => {
               <Row>
                 <Col span={4}>Tanggal Lahir</Col>
                 <Col span={20}>
-                  <Form.Item>
+                  <Form.Item
+                    name="tanggal_lahir"
+                    rules={[{ required: true, message: 'Masukkan tanggal lahir' }]}
+                    style={{ flex: 1 }}
+                  >
                     <Space direction="vertical" style={{ width: '100%' }}>
                       <DatePicker
                         onChange={onChange}
@@ -226,30 +234,44 @@ const ApplicationStatusIzinTinggal = () => {
                 <br></br>
                 <Title level={5}>Kabari Permohonan Selesai Kepada Pemohon</Title>
                 <br></br>
-                <Row>
-                  <Col span={2}></Col>
-                  <Col span={3}>Nama</Col>
-                  <Col span={5}>
-                    <Input placeholder="Masukkan Nama" />
-                  </Col>
-                  <Col span={1}></Col>
-                  &emsp;
-                  <Col span={3}>Nomor HP</Col>
-                  <Col span={5}>
-                    <Input placeholder="Masukkan Nomor Handphone" />
-                  </Col>
-                  <Col span={1}></Col>
-                  <Col span={2}>
-                    <Button
-                      type="primary"
-                      htmlType="submit"
-                      className="login-form-button"
-                      style={{ background: '#64aced', float: 'right' }}
+                <Form>
+                  <Row>
+                    <Col span={2}></Col>
+                    <Col span={3}>Nama</Col>
+                    <Col span={5}>
+                      <Form.Item
+                        name="nama_pemohon"
+                        rules={[{ required: true, message: 'Masukkan nama' }]}
+                        style={{ flex: 1 }}
                     >
-                      <strong>Simpan</strong>
-                    </Button>
-                  </Col>
-                </Row>
+                        <Input placeholder="Nama" />
+                      </Form.Item>
+                    </Col>
+                    <Col span={1}></Col>
+                    &emsp;
+                    <Col span={3}>Nomor HP</Col>
+                    <Col span={5}>
+                      <Form.Item
+                          name="nomor_hp"
+                          rules={[{ required: true, message: 'Masukkan nomor HP' }]}
+                          style={{ flex: 1 }}
+                      >
+                        <Input placeholder="Masukkan Nomor Handphone" />
+                      </Form.Item>  
+                    </Col>
+                    <Col span={1}></Col>
+                    <Col span={2}>
+                      <Button
+                        type="primary"
+                        htmlType="submit"
+                        className="login-form-button"
+                        style={{ background: '#64aced', float: 'right' }}
+                      >
+                        <strong>Simpan</strong>
+                      </Button>
+                    </Col>
+                  </Row>
+                </Form>
               </Col>
             </Row>
             <br></br>

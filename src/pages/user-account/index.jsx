@@ -175,16 +175,16 @@ const UserAccount = () => {
           </BreadCrumbContainer>
           <Row>
             <Col span={20}>
-              <Title level={4}>Akun Pengguna</Title>
+              <Title level={4}>Daftar Akun Pengguna</Title>
             </Col>
             <Col span={4}>
               <Link to="/akun-pengguna/tambah">
                 <Button
-                  type="success"
+                  type="primary"
                   htmlType="submit"
                   className="login-form-button"
                   size="large"
-                  style={{ float: 'right' }}
+                  style={{ float: 'right' }}style={{ background: '#64aced', float: 'right' }}
                 >
                   <strong>Tambah</strong>
                 </Button>

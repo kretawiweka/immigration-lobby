@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Checkbox, Card, Row, Alert } from 'antd';
+import { Form, Input, Button, Checkbox, Card, Row, Col, Alert } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 import HeroBackground from '../../assets/images/hero-bg.jpeg';
 import { setAuth } from '../../utils/auth';
+import { Link } from 'react-router-dom';
+import ImmigrationLogo from '../../assets/images/immigration_logo.png';
+
 
 import { SingleHeader } from '../../components/Header';
 import {
@@ -43,7 +46,47 @@ const Login = () => {
   return (
     <>
       <LoginContainer>
-        <SingleHeader color="#fafafa" title="DUTA LAYANAN KEIMIGRASIAN" />
+        <Row style={{ backgroundColor: '#f0f0f0' }}>
+          <Col span={24}>
+          <Link to="/">
+            <div
+              style={{ margin: 15, display: 'flex', alignItems: 'center' }}
+            >
+              <img
+                style={{ width: '110px', height: '100%', marginRight: '14px' }}
+                src={ImmigrationLogo}
+                alt="immigration-logo"
+              />
+              <div>
+                <h1
+                  style={{
+                    marginBottom: 0,
+                    marginTop: 0,
+                    fontSize: 25,
+                    fontWeight: 'bold',
+                    color: '#273c75',
+                  }}
+                >
+                  <strong>SIMIDUL</strong>
+                </h1>
+                <h3
+                  style={{
+                    marginBottom: 0,
+                    marginTop: -3,
+                    color: '#2f3640',
+                    fontSize: 16,
+                  }}
+                >
+                  SI Duta Layanan Keimigrasian
+                </h3>
+              </div>
+            </div>
+          </Link>
+          </Col>
+        </Row>
+        <br></br>
+        <br></br>
+        <br></br>
         <Content>
           <CardContainer>
             <Card bordered={false}>
@@ -66,7 +109,7 @@ const Login = () => {
                 <Form.Item
                   name="username"
                   rules={[
-                    { required: true, message: 'Please input your Username!' },
+                    { required: true, message: 'Masukkan username' },
                   ]}
                 >
                   <Input
@@ -77,7 +120,7 @@ const Login = () => {
                 <Form.Item
                   name="password"
                   rules={[
-                    { required: true, message: 'Please input your Password!' },
+                    { required: true, message: 'Masukkan username' },
                   ]}
                 >
                   <Input

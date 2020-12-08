@@ -1,5 +1,6 @@
 import Login from '../pages/login';
 import Home from '../pages/home';
+import HomeMasyarakat from '../pages/homemasyarakat';
 /** /informasi layanan */
 import ServiceInformation from '../pages/service-information';
 import ProductList from '../pages/service-information/product-list';
@@ -20,10 +21,12 @@ import OfficerPerformance from '../pages/report/officer-performance';
 import ManageServiceInformation from '../pages/manage-service-information';
 /** /online-chat */
 import ChatRoomList from '../pages/online-chat/chatroomlist';
+import ChatRoomList2 from '../pages/online-chat/chatroomlist2';
 import ChatRoom from '../pages/online-chat/chatroom';
 import StartChatRoom from '../pages/online-chat/startchatroom';
 import StartChatRoomAlt from '../pages/online-chat/startchatroomalt';
 import ChatRoomOver from '../pages/online-chat/chatroomover';
+import LayaniChatRoom from '../pages/online-chat/layanichatroom';
 /** /pencarian */
 import Search from '../pages/search';
 
@@ -94,8 +97,16 @@ const privateRoutes = [
     page: ChatRoomList,
   },
   {
+    path: '/online-chat/room-list2',
+    page: ChatRoomList2,
+  },
+  {
     path: '/online-chat/room',
     page: ChatRoom,
+  },
+  {
+    path: '/online-chat/layani-room',
+    page: LayaniChatRoom,
   },
   {
     path: '/online-chat/start-room',
@@ -112,6 +123,10 @@ const privateRoutes = [
   {
     path: '/pencarian',
     page: Search,
+  },
+  {
+    path: '/masyarakat',
+    page: HomeMasyarakat,
   },
 ];
 
