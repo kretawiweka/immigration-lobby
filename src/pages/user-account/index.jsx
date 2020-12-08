@@ -184,7 +184,7 @@ const UserAccount = () => {
                   htmlType="submit"
                   className="login-form-button"
                   size="large"
-                  style={{ float: 'right' }}style={{ background: '#64aced', float: 'right' }}
+                  style={{ background: '#64aced', float: 'right' }}
                 >
                   <strong>Tambah</strong>
                 </Button>

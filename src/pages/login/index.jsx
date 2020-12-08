@@ -7,8 +7,6 @@ import { setAuth } from '../../utils/auth';
 import { Link } from 'react-router-dom';
 import ImmigrationLogo from '../../assets/images/immigration_logo.png';
 
-
-import { SingleHeader } from '../../components/Header';
 import {
   Content,
   CardContainer,
@@ -48,40 +46,44 @@ const Login = () => {
       <LoginContainer>
         <Row style={{ backgroundColor: '#f0f0f0' }}>
           <Col span={24}>
-          <Link to="/">
-            <div
-              style={{ margin: 15, display: 'flex', alignItems: 'center' }}
-            >
-              <img
-                style={{ width: '110px', height: '100%', marginRight: '14px' }}
-                src={ImmigrationLogo}
-                alt="immigration-logo"
-              />
-              <div>
-                <h1
+            <Link to="/">
+              <div
+                style={{ margin: 15, display: 'flex', alignItems: 'center' }}
+              >
+                <img
                   style={{
-                    marginBottom: 0,
-                    marginTop: 0,
-                    fontSize: 25,
-                    fontWeight: 'bold',
-                    color: '#273c75',
+                    width: '110px',
+                    height: '100%',
+                    marginRight: '14px',
                   }}
-                >
-                  <strong>SIMIDUL</strong>
-                </h1>
-                <h3
-                  style={{
-                    marginBottom: 0,
-                    marginTop: -3,
-                    color: '#2f3640',
-                    fontSize: 16,
-                  }}
-                >
-                  SI Duta Layanan Keimigrasian
-                </h3>
+                  src={ImmigrationLogo}
+                  alt="immigration-logo"
+                />
+                <div>
+                  <h1
+                    style={{
+                      marginBottom: 0,
+                      marginTop: 0,
+                      fontSize: 25,
+                      fontWeight: 'bold',
+                      color: '#273c75',
+                    }}
+                  >
+                    <strong>SIMIDUL</strong>
+                  </h1>
+                  <h3
+                    style={{
+                      marginBottom: 0,
+                      marginTop: -3,
+                      color: '#2f3640',
+                      fontSize: 16,
+                    }}
+                  >
+                    SI Duta Layanan Keimigrasian
+                  </h3>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
           </Col>
         </Row>
         <br></br>
@@ -108,9 +110,7 @@ const Login = () => {
               >
                 <Form.Item
                   name="username"
-                  rules={[
-                    { required: true, message: 'Masukkan username' },
-                  ]}
+                  rules={[{ required: true, message: 'Masukkan username' }]}
                 >
                   <Input
                     prefix={<UserOutlined className="site-form-item-icon" />}
@@ -119,9 +119,7 @@ const Login = () => {
                 </Form.Item>
                 <Form.Item
                   name="password"
-                  rules={[
-                    { required: true, message: 'Masukkan username' },
-                  ]}
+                  rules={[{ required: true, message: 'Masukkan username' }]}
                 >
                   <Input
                     prefix={<LockOutlined className="site-form-item-icon" />}

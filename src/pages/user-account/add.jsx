@@ -18,11 +18,7 @@ import {
   Alert,
 } from 'antd';
 
-import {
-  EyeInvisibleOutlined,
-  EyeTwoTone,
-  ArrowLeftOutlined,
-} from '@ant-design/icons';
+import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -86,8 +82,7 @@ const UserAccountAdd = () => {
               }}
             >
               <Row>
-                <Col span={5}>
-                </Col>
+                <Col span={5}></Col>
                 <Col span={14}>
                   {visibleAlert ? (
                     <div style={{ marginBottom: '14px' }}>
@@ -177,10 +172,19 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={10}>
                   <Form.Item>
-                    <Select defaultValue="Pilih Hak Akses" style={{ width: '100%' }}>
-                      <Option value="Administrator Humas">Administrator Humas</Option>
-                      <Option value="Administrator Kanim">Administrator Kanim</Option>
-                      <Option value="Petugas Duta Layanan">Petugas Duta Layanan</Option>
+                    <Select
+                      defaultValue="Pilih Hak Akses"
+                      style={{ width: '100%' }}
+                    >
+                      <Option value="Administrator Humas">
+                        Administrator Humas
+                      </Option>
+                      <Option value="Administrator Kanim">
+                        Administrator Kanim
+                      </Option>
+                      <Option value="Petugas Duta Layanan">
+                        Petugas Duta Layanan
+                      </Option>
                     </Select>
                   </Form.Item>
                 </Col>
@@ -542,7 +546,10 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={3}>
                   <Form.Item>
-                    <Select defaultValue="Pilih Pangkat" style={{ width: '100%' }}>
+                    <Select
+                      defaultValue="Pilih Pangkat"
+                      style={{ width: '100%' }}
+                    >
                       <Option value="i">I</Option>
                       <Option value="ii">II</Option>
                       <Option value="iii">III</Option>
@@ -556,7 +563,10 @@ const UserAccountAdd = () => {
                 </Col>
                 <Col span={3}>
                   <Form.Item>
-                    <Select defaultValue="Pilih Golongan" style={{ width: '100%' }}>
+                    <Select
+                      defaultValue="Pilih Golongan"
+                      style={{ width: '100%' }}
+                    >
                       <Option value="a">A</Option>
                       <Option value="b">B</Option>
                       <Option value="c">C</Option>
@@ -568,8 +578,7 @@ const UserAccountAdd = () => {
               <br></br>
               <Row>
                 <Col span={5}></Col>
-                <Col span={6}>
-                </Col>
+                <Col span={6}></Col>
                 <Col span={6}>
                   <Button
                     type="primary"
