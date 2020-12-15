@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox, Card, Row, Col, Alert } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 import HeroBackground from '../../assets/images/hero-bg.jpeg';
 import { setAuth } from '../../utils/auth';
-import { Link } from 'react-router-dom';
 import ImmigrationLogo from '../../assets/images/immigration_logo.png';
 
 import {
@@ -13,12 +13,32 @@ import {
   LoginImage,
   LoginLayer,
   LoginContainer,
+  ActionContainer,
 } from './style';
 
-const ACCOUNT = {
-  username: 'admin',
-  password: 'admin',
-};
+const ACCOUNT = [
+  {
+    fullname: 'M. Febriansyah Lutfi',
+    username: 'ferbiansyah',
+    password: 'secret',
+    role_name: 'Petugas Duta Layanan',
+    role: 'PETUGAS_DUTA_LAYANAN',
+  },
+  {
+    fullname: 'Hadrian Bayanhaqi',
+    username: 'hadrian',
+    password: 'secret',
+    role_name: 'Administrator Kanim',
+    role: 'ADMIN_KANIM',
+  },
+  {
+    fullname: 'Arfan Gumintang',
+    username: 'arfan',
+    password: 'secret',
+    role_name: 'Administrator Humas',
+    role: 'ADMIN_HUMAS',
+  },
+];
 
 const Login = () => {
   const [alertVisible, setAlertVisible] = useState(false);
@@ -27,12 +47,17 @@ const Login = () => {
     setAlertVisible(false);
   };
   const onFormSubmit = (values) => {
-    if (
-      values.username === ACCOUNT.username &&
-      values.password === ACCOUNT.password
-    ) {
+    let isAuth = ACCOUNT.some(
+      (item) =>
+        item.username === values.username && item.password === values.password
+    );
+    let index = ACCOUNT.findIndex((item) => item.username === values.username);
+    if (isAuth) {
       setAuth({
         username: values.username,
+        fullname: ACCOUNT[index].fullname,
+        role_name: ACCOUNT[index].role_name,
+        role: ACCOUNT[index].role,
       });
       window.location.href = '/';
     } else {
@@ -119,7 +144,7 @@ const Login = () => {
                 </Form.Item>
                 <Form.Item
                   name="password"
-                  rules={[{ required: true, message: 'Masukkan username' }]}
+                  rules={[{ required: true, message: 'Masukkan password' }]}
                 >
                   <Input
                     prefix={<LockOutlined className="site-form-item-icon" />}
@@ -132,7 +157,14 @@ const Login = () => {
                     <Checkbox>Ingat Saya</Checkbox>
                   </Form.Item>
                 </Form.Item>
-                <Row align="center">
+                <ActionContainer>
+                  <Form.Item>
+                    <Link to="/layanan-publik">
+                      <Button htmlType="button" className="login-form-button">
+                        Layanan Publik
+                      </Button>
+                    </Link>
+                  </Form.Item>
                   <Form.Item>
                     <Button
                       type="primary"
@@ -142,7 +174,7 @@ const Login = () => {
                       Masuk
                     </Button>
                   </Form.Item>
-                </Row>
+                </ActionContainer>
               </Form>
             </Card>
           </CardContainer>
