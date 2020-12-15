@@ -1,5 +1,6 @@
 import Login from '../pages/login';
 import Home from '../pages/home';
+import PublicHome from '../pages/public-home';
 import HomeMasyarakat from '../pages/homemasyarakat';
 /** /informasi layanan */
 import ServiceInformation from '../pages/service-information';
@@ -34,22 +35,6 @@ const privateRoutes = [
   {
     path: '/',
     page: Home,
-  },
-  {
-    path: '/informasi-layanan',
-    page: ServiceInformation,
-  },
-  {
-    path: '/informasi-layanan/:id_service',
-    page: ProductList,
-  },
-  {
-    path: '/informasi-layanan/:id_service/:id_product',
-    page: ProductDetail,
-  },
-  {
-    path: '/informasi-layanan',
-    page: ServiceInformation,
   },
   {
     path: '/kelola-informasi-layanan',
@@ -101,12 +86,50 @@ const privateRoutes = [
     page: ChatRoomList2,
   },
   {
-    path: '/online-chat/room',
-    page: ChatRoom,
-  },
-  {
     path: '/online-chat/layani-room',
     page: LayaniChatRoom,
+  },
+  {
+    path: '/online-chat/room/over',
+    page: ChatRoomOver,
+  },
+  {
+    path: '/masyarakat',
+    page: HomeMasyarakat,
+  },
+];
+
+const loginRoutes = [
+  {
+    path: '/login',
+    page: Login,
+  },
+];
+
+const publicRoutes = [
+  {
+    path: '/informasi-layanan',
+    page: ServiceInformation,
+  },
+  {
+    path: '/informasi-layanan/:id_service',
+    page: ProductList,
+  },
+  {
+    path: '/informasi-layanan/:id_service/:id_product',
+    page: ProductDetail,
+  },
+  {
+    path: '/layanan-publik',
+    page: PublicHome,
+  },
+  {
+    path: '/pencarian',
+    page: Search,
+  },
+  {
+    path: '/online-chat/room',
+    page: ChatRoom,
   },
   {
     path: '/online-chat/start-room',
@@ -116,25 +139,6 @@ const privateRoutes = [
     path: '/online-chat/start-room/alt',
     page: StartChatRoomAlt,
   },
-  {
-    path: '/online-chat/room/over',
-    page: ChatRoomOver,
-  },
-  {
-    path: '/pencarian',
-    page: Search,
-  },
-  {
-    path: '/masyarakat',
-    page: HomeMasyarakat,
-  },
 ];
 
-const publicRoutes = [
-  {
-    path: '/login',
-    page: Login,
-  },
-];
-
-export { privateRoutes, publicRoutes };
+export { privateRoutes, publicRoutes, loginRoutes };

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 import { removeAuth } from '../../utils/auth';
 import ImmigrationLogo from '../../assets/images/immigration_logo.png';
+import { getLocalStorage } from '../../utils/localStorage';
 
 import {
   HeaderContainer,
@@ -77,9 +78,16 @@ const Header = () => {
               marginRight: 10,
             }}
           >
-            <strong>Arfan Gumintang</strong> (Administrator Humas)
+            {getLocalStorage('auth') && (
+              <strong>{getLocalStorage('auth').fullname}</strong>
+            )}{' '}
+            {getLocalStorage('auth') && (
+              <span>({getLocalStorage('auth').role_name})</span>
+            )}
           </h3>
-          <Button onClick={onLogout}>Keluar</Button>
+          {getLocalStorage('auth') && (
+            <Button onClick={onLogout}>Keluar</Button>
+          )}
         </HeaderAction>
       </HeaderContent>
     </HeaderContainer>

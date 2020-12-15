@@ -29,4 +29,16 @@ const LoginContainer = styled.div`
   width: 100%;
 `;
 
-export { Content, CardContainer, LoginImage, LoginLayer, LoginContainer };
+const ActionContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+export {
+  Content,
+  CardContainer,
+  LoginImage,
+  LoginLayer,
+  LoginContainer,
+  ActionContainer,
+};

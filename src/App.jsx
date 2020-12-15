@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { privateRoutes, publicRoutes } from './routes';
-import { PrivateRoute, PublicRoute } from './routes/redirect-route';
+import { privateRoutes, loginRoutes, publicRoutes } from './routes';
+import { PrivateRoute, LoginRoute } from './routes/redirect-route';
 
 const App = () => (
   <Router>
@@ -15,8 +15,11 @@ const App = () => (
           exact
         />
       ))}
+      {loginRoutes.map((item, index) => (
+        <LoginRoute key={index} path={item.path} component={item.page} exact />
+      ))}
       {publicRoutes.map((item, index) => (
-        <PublicRoute key={index} path={item.path} component={item.page} exact />
+        <Route key={index} exact path={item.path} component={item.page} />
       ))}
     </Switch>
   </Router>

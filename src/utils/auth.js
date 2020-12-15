@@ -13,4 +13,11 @@ const removeAuth = () => {
   localStorage.removeItem('auth');
 };
 
-export { checkAuth, setAuth, removeAuth };
+const isAuthRole = (authRole) => {
+  if (checkAuth()) {
+    return getLocalStorage('auth').role === authRole;
+  }
+  return false;
+};
+
+export { checkAuth, setAuth, removeAuth, isAuthRole };

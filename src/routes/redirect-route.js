@@ -5,8 +5,8 @@ const PrivateRoute = ({ ...props }) => {
   return checkAuth() ? <Route {...props} /> : <Redirect to="/login" />;
 };
 
-const PublicRoute = ({ ...props }) => {
+const LoginRoute = ({ ...props }) => {
   return !checkAuth() ? <Route {...props} /> : <Redirect to="/" />;
 };
 
-export { PrivateRoute, PublicRoute };
+export { PrivateRoute, LoginRoute };
