@@ -19,21 +19,21 @@ import {
 const ACCOUNT = [
   {
     fullname: 'M. Febriansyah Lutfi',
-    username: 'ferbiansyah',
+    username: 'petugasdutalayanan',
     password: 'secret',
     role_name: 'Petugas Duta Layanan',
     role: 'PETUGAS_DUTA_LAYANAN',
   },
   {
     fullname: 'Hadrian Bayanhaqi',
-    username: 'hadrian',
+    username: 'adminkanim',
     password: 'secret',
     role_name: 'Administrator Kanim',
     role: 'ADMIN_KANIM',
   },
   {
     fullname: 'Arfan Gumintang',
-    username: 'arfan',
+    username: 'adminhumas',
     password: 'secret',
     role_name: 'Administrator Humas',
     role: 'ADMIN_HUMAS',
@@ -158,13 +158,6 @@ const Login = () => {
                   </Form.Item>
                 </Form.Item>
                 <ActionContainer>
-                  <Form.Item>
-                    <Link to="/layanan-publik">
-                      <Button htmlType="button" className="login-form-button">
-                        Layanan Publik
-                      </Button>
-                    </Link>
-                  </Form.Item>
                   <Form.Item>
                     <Button
                       type="primary"
