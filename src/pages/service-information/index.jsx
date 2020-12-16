@@ -154,7 +154,7 @@ const ServiceInformation = (props) => {
               rules={[{ required: true, message: 'Masukkan kata kunci' }]}
               style={{ flex: 1 }}
             >
-              <Input placeholder="Typing for search service information" />
+              <Input placeholder="Type to search service information" />
             </Form.Item>
             <Form.Item>
               <Button htmlType="submit" style={{ marginLeft: '14px' }}>
