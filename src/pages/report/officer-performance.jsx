@@ -43,6 +43,7 @@ function onSearch(val) {
 
 const OfficerPerformance = () => {
   const dateFormat = 'DD-MM-YYYY';
+  const [isVisibleChart, setIsVisibleChart] = useState(false);
   const [dataChart] = useState({
     options: {
       chart: {
@@ -86,8 +87,7 @@ const OfficerPerformance = () => {
             </Breadcrumb>
           </BreadCrumbContainer>
           <Row>
-            <Col span={2}></Col>
-            <Col span={6}>
+            <Col span={8}>
               <Card>
                 <Title level={4} style={{ marginLeft: 0 }}>
                   <strong>Filter Data Laporan</strong>
@@ -98,7 +98,12 @@ const OfficerPerformance = () => {
                   </strong>
                 </Title>
                 <br></br>
-                <Form {...layout}>
+                <Form
+                  {...layout}
+                  onFinish={() => {
+                    setIsVisibleChart(true);
+                  }}
+                >
                   <Form.Item
                     label="Kantor Imigrasi"
                     name="kantor_imigrasi"
@@ -159,26 +164,28 @@ const OfficerPerformance = () => {
                 </Form>
               </Card>
             </Col>
-            <Col span={14}>
-              <Card style={{ marginLeft: '40px' }}>
-                <h2>
-                  <strong>Laporan Kinerja Petugas Duta Layanan</strong>
-                </h2>
-                <h4>Kantor Imigrasi Kelas I Khusus Jakarta Selatan</h4>
-                <h4>Periode Laporan: 01 s.d. 31 Desember 2020</h4>
-                <br></br>
-                <hr></hr>
-                <br></br>
-                <center>
-                  <Chart
-                    options={dataChart.options}
-                    series={dataChart.series}
-                    type="bar"
-                    width="700"
-                  />
-                </center>
-              </Card>
-            </Col>
+            {isVisibleChart && (
+              <Col span={14}>
+                <Card style={{ marginLeft: '40px' }}>
+                  <h2>
+                    <strong>Laporan Kinerja Petugas Duta Layanan</strong>
+                  </h2>
+                  <h4>Kantor Imigrasi Kelas I Khusus Jakarta Selatan</h4>
+                  <h4>Periode Laporan: 01 s.d. 31 Desember 2020</h4>
+                  <br></br>
+                  <hr></hr>
+                  <br></br>
+                  <center>
+                    <Chart
+                      options={dataChart.options}
+                      series={dataChart.series}
+                      type="bar"
+                      width="700"
+                    />
+                  </center>
+                </Card>
+              </Col>
+            )}
             <Col span={2}></Col>
           </Row>
         </SubFeatureContent>

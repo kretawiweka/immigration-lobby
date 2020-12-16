@@ -59,7 +59,7 @@ const Report = () => {
                 </Card>
               </Link>
             )}
-            {isAuthRole('ADMIN_KANIM') && (
+            {(isAuthRole('ADMIN_HUMAS') || isAuthRole('ADMIN_KANIM')) && (
               <Link
                 to="/laporan/informasi-sering-ditanyakan"
                 style={{ marginLeft: '50px' }}
@@ -95,7 +95,7 @@ const Report = () => {
                 </Card>
               </Link>
             )}
-            {isAuthRole('ADMIN_HUMAS') && (
+            {isAuthRole('ADMIN_KANIM') && (
               <Link
                 to="/laporan/peforma-petugas"
                 style={{ marginLeft: '50px' }}
