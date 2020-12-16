@@ -1,6 +1,5 @@
 import Login from '../pages/login';
 import Home from '../pages/home';
-import PublicHome from '../pages/public-home';
 import HomeMasyarakat from '../pages/homemasyarakat';
 /** /informasi layanan */
 import ServiceInformation from '../pages/service-information';

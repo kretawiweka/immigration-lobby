@@ -24,37 +24,39 @@ const HomePage = () => {
       </center>
       <Content>
         <CardContent>
-          <Link to="/informasi-layanan">
-            <Card
-              backgroundColor="#e8e8e8"
-              width="200px"
-              style={{ height: '240px' }}
-            >
-              <Row>
-                <Col span={24}>
-                  <Row>
-                    <Col span={24}>
-                      <center>
-                        <img
-                          style={{ width: '110px', height: '100%' }}
-                          src={InformasiLayananKeimigrasianLogo}
-                          alt="Informasi-Layanan-Keimigrasian-logo"
-                        />
-                      </center>
-                    </Col>
-                  </Row>
-                  <br></br>
-                  <Row>
-                    <Col span={24}>
-                      <CardTitle>
-                        Informasi Layanan<br></br>Keimigrasian
-                      </CardTitle>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Card>
-          </Link>
+          {isAuthRole('PETUGAS_DUTA_LAYANAN') && (
+            <Link to="/informasi-layanan">
+              <Card
+                backgroundColor="#e8e8e8"
+                width="200px"
+                style={{ height: '240px' }}
+              >
+                <Row>
+                  <Col span={24}>
+                    <Row>
+                      <Col span={24}>
+                        <center>
+                          <img
+                            style={{ width: '110px', height: '100%' }}
+                            src={InformasiLayananKeimigrasianLogo}
+                            alt="Informasi-Layanan-Keimigrasian-logo"
+                          />
+                        </center>
+                      </Col>
+                    </Row>
+                    <br></br>
+                    <Row>
+                      <Col span={24}>
+                        <CardTitle>
+                          Informasi Layanan<br></br>Keimigrasian
+                        </CardTitle>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Card>
+            </Link>
+          )}
           {isAuthRole('PETUGAS_DUTA_LAYANAN') && (
             <React.Fragment>
               <Link to="/status-permohonan">
@@ -186,40 +188,39 @@ const HomePage = () => {
               </Card>
             </Link>
           )}
-          {isAuthRole('ADMIN_HUMAS') ||
-            (isAuthRole('ADMIN_KANIM') && (
-              <Link to="/akun-pengguna">
-                <Card
-                  backgroundColor="#e8e8e8"
-                  width="200px"
-                  style={{ height: '240px' }}
-                >
-                  <Row>
-                    <Col span={24}>
-                      <Row>
-                        <Col span={24}>
-                          <center>
-                            <img
-                              style={{ width: '110px', height: '100%' }}
-                              src={AkunPenggunaLogo}
-                              alt="Akun-Pengguna-logo"
-                            />
-                          </center>
-                        </Col>
-                      </Row>
-                      <br></br>
-                      <Row>
-                        <Col span={24}>
-                          <CardTitle>
-                            Akun<br></br>Pengguna
-                          </CardTitle>
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Card>
-              </Link>
-            ))}
+          {(isAuthRole('ADMIN_HUMAS') || isAuthRole('ADMIN_KANIM')) && (
+            <Link to="/akun-pengguna">
+              <Card
+                backgroundColor="#e8e8e8"
+                width="200px"
+                style={{ height: '240px' }}
+              >
+                <Row>
+                  <Col span={24}>
+                    <Row>
+                      <Col span={24}>
+                        <center>
+                          <img
+                            style={{ width: '110px', height: '100%' }}
+                            src={AkunPenggunaLogo}
+                            alt="Akun-Pengguna-logo"
+                          />
+                        </center>
+                      </Col>
+                    </Row>
+                    <br></br>
+                    <Row>
+                      <Col span={24}>
+                        <CardTitle>
+                          Akun<br></br>Pengguna
+                        </CardTitle>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Card>
+            </Link>
+          )}
         </CardContent>
       </Content>
     </Layout>

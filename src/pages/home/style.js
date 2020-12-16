@@ -8,7 +8,7 @@ const CardContent = styled.div`
   margin: 14px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const CardTitle = styled.h4`
