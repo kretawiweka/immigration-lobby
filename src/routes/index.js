@@ -93,10 +93,6 @@ const privateRoutes = [
     path: '/online-chat/room/over',
     page: ChatRoomOver,
   },
-  {
-    path: '/masyarakat',
-    page: HomeMasyarakat,
-  },
 ];
 
 const loginRoutes = [
@@ -120,8 +116,8 @@ const publicRoutes = [
     page: ProductDetail,
   },
   {
-    path: '/layanan-publik',
-    page: PublicHome,
+    path: '/masyarakat',
+    page: HomeMasyarakat,
   },
   {
     path: '/pencarian',
