@@ -68,13 +68,15 @@ const Search = () => {
             <CardContent>
               <Link to="/informasi-layanan/1/1">
                 <Card title="Paspor Biasa 24 Halaman" style={{ width: '100%' }}>
-                  <h3>4. Dokumen Persyaratan</h3>
+                  <h3>1. Deskripsi Umum Paspor Biasa 24 Halaman</h3>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book ....
+                    Paspor adalah dokumen resmi yang dikeluarkan oleh pejabat
+                    yang berwenang dari suatu negara yang memuat identitas
+                    pemegangnya dan berlaku untuk melakukan perjalanan antar
+                    negara. Paspor berisi biodata pemegangnya yang meliputi
+                    antara lain foto pemegang, tanda tangan, tempat dan tanggal
+                    kelahiran, informasi kebangsaan dan kadang-kadang juga
+                    beberapa informasi lain mengenai identifikasi individu ...
                   </p>
                 </Card>
               </Link>
@@ -82,13 +84,15 @@ const Search = () => {
             <CardContent>
               <Link to="/informasi-layanan/1/1">
                 <Card title="Paspor Biasa 48 Halaman" style={{ width: '100%' }}>
-                  <h3>4. Dokumen Persyaratan</h3>
+                  <h3>1. Deskripsi Umum Paspor Biasa 24 Halaman</h3>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book ....
+                    Paspor adalah dokumen resmi yang dikeluarkan oleh pejabat
+                    yang berwenang dari suatu negara yang memuat identitas
+                    pemegangnya dan berlaku untuk melakukan perjalanan antar
+                    negara. Paspor berisi biodata pemegangnya yang meliputi
+                    antara lain foto pemegang, tanda tangan, tempat dan tanggal
+                    kelahiran, informasi kebangsaan dan kadang-kadang juga
+                    beberapa informasi lain mengenai identifikasi individu ...
                   </p>
                 </Card>
               </Link>
@@ -99,13 +103,15 @@ const Search = () => {
                   title="Paspor Elektronik 24 Halaman"
                   style={{ width: '100%' }}
                 >
-                  <h3>4. Dokumen Persyaratan</h3>
+                  <h3>4. Deskripsi Umum Paspor Biasa 24 Halaman</h3>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book ....
+                    Paspor adalah dokumen resmi yang dikeluarkan oleh pejabat
+                    yang berwenang dari suatu negara yang memuat identitas
+                    pemegangnya dan berlaku untuk melakukan perjalanan antar
+                    negara. Paspor berisi biodata pemegangnya yang meliputi
+                    antara lain foto pemegang, tanda tangan, tempat dan tanggal
+                    kelahiran, informasi kebangsaan dan kadang-kadang juga
+                    beberapa informasi lain mengenai identifikasi individu ...
                   </p>
                 </Card>
               </Link>

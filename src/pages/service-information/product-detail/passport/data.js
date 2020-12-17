@@ -17,8 +17,8 @@ const data = {
             </p>
             <h3>2. Biaya Permohonan</h3>
             <ul>
-              <li>Baru : Rp 0 Penggantian : Rp 0 </li>
-              <li>Perubahan : Rp 0</li>
+              <li>Baru : Rp 350.000 Penggantian : Rp 350.000 </li>
+              <li>Perubahan : Rp 350.000</li>
             </ul>
             <h4>3. Tujuan Permohonan Paspor</h4>
             <ul>
@@ -30,33 +30,7 @@ const data = {
               <li>Bekerja Formal</li>
               <li>Umroh</li>
               <li>Haji</li>
-            </ul>
-            <h3>4. Dokumen Persyaratan</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-            <h3>5. Tahapan Permohonan</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+            </ul>            
         </div>`,
 };
 
