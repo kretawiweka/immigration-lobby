@@ -88,10 +88,6 @@ const privateRoutes = [
     path: '/online-chat/layani-room',
     page: LayaniChatRoom,
   },
-  {
-    path: '/online-chat/room/over',
-    page: ChatRoomOver,
-  },
 ];
 
 const loginRoutes = [
@@ -133,6 +129,10 @@ const publicRoutes = [
   {
     path: '/online-chat/start-room/alt',
     page: StartChatRoomAlt,
+  },
+  {
+    path: '/online-chat/room/over',
+    page: ChatRoomOver,
   },
 ];
 
